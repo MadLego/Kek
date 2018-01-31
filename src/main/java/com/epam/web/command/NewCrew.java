@@ -1,9 +1,9 @@
 package com.epam.web.command;
 
 import com.epam.Path;
+import com.epam.dao.impl.MyCrewDAO;
 import com.epam.dto.CrewParser;
 import com.epam.entity.Crew;
-import com.epam.dao.impl.MyCrewDAO;
 import org.apache.log4j.Logger;
 
 import javax.servlet.ServletException;
@@ -20,6 +20,8 @@ public class NewCrew extends Command {
     public String execute(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         LOG.debug("Command starts");
 
+
+
         Crew c=newCrew(request);
         String result = new MyCrewDAO().validate(c, newCrewList(request), Integer.parseInt(request.getParameter("flightId")));
         if (!result.equals("OK")) {
@@ -28,8 +30,9 @@ public class NewCrew extends Command {
             return Path.CREW_THIS;
         }
         LOG.trace("Crew List -->"+newCrewList(request));
-        LOG.debug("Command finished");
 
+
+        LOG.debug("Command finished");
         return Path.CREW_RETURN_LIST;
     }
 

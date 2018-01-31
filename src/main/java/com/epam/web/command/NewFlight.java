@@ -2,6 +2,7 @@ package com.epam.web.command;
 
 import com.epam.Path;
 import com.epam.db.DBManager;
+import com.epam.db.TransactionManager;
 import com.epam.dto.FlightParser;
 import com.epam.entity.Flight;
 import com.epam.dao.impl.MyFlightDAO;
@@ -11,6 +12,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.sql.Connection;
 import java.util.ArrayList;
 
 public class NewFlight extends Command {
@@ -20,19 +22,22 @@ public class NewFlight extends Command {
     public String execute(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         LOG.debug("Command starts");
 
+        Connection connection = TransactionManager.prepareConection(DBManager.getInstance().getConnection());
+
         Flight f = newFlight(request);
         LOG.trace("New Flight --> "+f);
 
         ArrayList<String> list = validateNewFlight(f);
         if (list.isEmpty()) {
-            new MyFlightDAO().newFlight(DBManager.getInstance().getConnection(), f);
+            new MyFlightDAO().newFlight(connection, f);
         }else {
             LOG.trace("Errors --> "+list);
             request.setAttribute("errors",list);
             return Path.FLIGHTS_NEW;
         }
-        LOG.debug("Command finished");
 
+        TransactionManager.close(connection);
+        LOG.debug("Command finished");
         return Path.FLIGHTS_LIST;
     }
 

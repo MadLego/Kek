@@ -2,6 +2,7 @@ package com.epam.web.command;
 
 import com.epam.Path;
 import com.epam.db.DBManager;
+import com.epam.db.TransactionManager;
 import com.epam.entity.Operator;
 import com.epam.dao.impl.MyOperatorDAO;
 import org.apache.log4j.Logger;
@@ -10,6 +11,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.sql.Connection;
 
 public class Login extends Command {
     private static final Logger LOG = Logger.getLogger(Login.class);
@@ -18,7 +20,9 @@ public class Login extends Command {
     public String execute(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         LOG.debug("Command starts");
 
-        Operator operator = new MyOperatorDAO().login(DBManager.getInstance().getConnection(),request.getParameter("username"));
+        Connection connection = TransactionManager.prepareConection(DBManager.getInstance().getConnection());
+
+        Operator operator = new MyOperatorDAO().login(connection,request.getParameter("username"));
         LOG.trace("User"+operator);
         String result = checkLogin(operator,request);
         if (result.equals("")){
@@ -26,8 +30,10 @@ public class Login extends Command {
         }
         LOG.trace("Errors --> "+result);
         request.setAttribute("loginResult",result);
-        LOG.debug("Command finished");
 
+        TransactionManager.close(connection);
+
+        LOG.debug("Command finished");
         return Path.OPERATOR_LOGIN;
     }
     String checkLogin(Operator operator,HttpServletRequest req){

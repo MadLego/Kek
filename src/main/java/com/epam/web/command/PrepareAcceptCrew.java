@@ -5,6 +5,7 @@ import com.epam.dao.impl.MyCrewDAO;
 import com.epam.dao.impl.MyEmployeeDAO;
 import com.epam.dao.impl.MyFlightDAO;
 import com.epam.db.DBManager;
+import com.epam.db.TransactionManager;
 import com.epam.entity.Crew;
 import com.epam.entity.CrewMan;
 import com.epam.entity.CrewView;
@@ -25,11 +26,16 @@ public class PrepareAcceptCrew extends Command {
     public String execute(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         LOG.debug("Command starts");
 
-        List<Crew> crews= new MyCrewDAO().showAllCrew(DBManager.getInstance().getConnection());
+        Connection connection = TransactionManager.prepareConection(DBManager.getInstance().getConnection());
+
+
+        List<Crew> crews= new MyCrewDAO().showAllCrew(connection);
         LOG.trace("Prepare crew list --> "+crews);
         ArrayList<CrewView> crewViews = fillCrewView(crews);
         LOG.trace("Ready crew list --> "+crews);
         request.setAttribute("views",crewViews);
+
+        TransactionManager.close(connection);
 
         LOG.debug("Command finished");
         return Path.CREW_LIST_ADMIN;

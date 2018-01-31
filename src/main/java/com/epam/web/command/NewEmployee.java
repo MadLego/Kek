@@ -2,6 +2,7 @@ package com.epam.web.command;
 
 import com.epam.Path;
 import com.epam.db.DBManager;
+import com.epam.db.TransactionManager;
 import com.epam.dto.EmployeeParser;
 import com.epam.entity.CrewMan;
 import com.epam.dao.impl.MyEmployeeDAO;
@@ -11,6 +12,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.sql.Connection;
 import java.util.ArrayList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -22,19 +24,21 @@ public class NewEmployee extends Command {
     public String execute(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         LOG.debug("Command starts");
 
+        Connection connection = TransactionManager.prepareConection(DBManager.getInstance().getConnection());
+
         CrewMan man = newEmployee(request);
         LOG.trace("New Employee --> "+man);
         ArrayList<String> list=validateEmployee(man);
         if (list.isEmpty()) {
-            new MyEmployeeDAO().newEmployee(DBManager.getInstance().getConnection(), newEmployee(request));
+            new MyEmployeeDAO().newEmployee(connection, newEmployee(request));
         }else {
             LOG.trace("Errors --> "+list);
             request.setAttribute("errors",list);
             return Path.EMPLOYEE_PREPARE_NEW;
         }
 
+        TransactionManager.close(connection);
         LOG.debug("Command finished");
-
         return Path.EMPLOYEE_NEW;
     }
 

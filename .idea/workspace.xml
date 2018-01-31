@@ -2,61 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c9f21f2f-8a87-40d1-bbcb-d54dcbc9d090" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/db/DBManager.java" afterPath="$PROJECT_DIR$/src/main/java/com/epam/db/DBManager.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/tag/LanguageTag.java" afterPath="$PROJECT_DIR$/src/main/java/com/epam/tag/LanguageTag.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/web/command/AcceptCrew.java" afterPath="$PROJECT_DIR$/src/main/java/com/epam/web/command/AcceptCrew.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/web/command/AllFlightsList.java" afterPath="$PROJECT_DIR$/src/main/java/com/epam/web/command/AllFlightsList.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/web/command/ChangeEmployee.java" afterPath="$PROJECT_DIR$/src/main/java/com/epam/web/command/ChangeEmployee.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/web/command/ChangeFlight.java" afterPath="$PROJECT_DIR$/src/main/java/com/epam/web/command/ChangeFlight.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/web/command/CommandContainer.java" afterPath="$PROJECT_DIR$/src/main/java/com/epam/web/command/CommandContainer.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/web/command/DeleteEmployee.java" afterPath="$PROJECT_DIR$/src/main/java/com/epam/web/command/DeleteEmployee.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/web/command/Main.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/page/administrator.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/page/administrator.jsp" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/page/admissionCrew.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/page/admissionCrew.jsp" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/page/changeEmployee.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/page/changeEmployee.jsp" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/page/changeEmployeeList.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/page/changeEmployeeList.jsp" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/page/changeFlight.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/page/changeFlight.jsp" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/page/changeFlightList.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/page/changeFlightList.jsp" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/page/deleteEmployee.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/page/deleteEmployee.jsp" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/page/deleteFlight.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/page/deleteFlight.jsp" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/page/flights.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/page/flights.jsp" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/page/login.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/page/login.jsp" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/page/main.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/page/main.jsp" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/page/newCrew.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/page/newCrew.jsp" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/page/newCrewList.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/page/newCrewList.jsp" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/page/newEmployee.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/page/newEmployee.jsp" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/page/newFlight.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/page/newFlight.jsp" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/page/registration.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/page/registration.jsp" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/page/searchingFlight.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/page/searchingFlight.jsp" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/epam/db/DBManager.class" afterPath="$PROJECT_DIR$/target/classes/com/epam/db/DBManager.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/epam/tag/LanguageTag.class" afterPath="$PROJECT_DIR$/target/classes/com/epam/tag/LanguageTag.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/epam/web/command/CommandContainer.class" afterPath="$PROJECT_DIR$/target/classes/com/epam/web/command/CommandContainer.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/epam/web/command/Main.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/logs/ST4Example.log" afterPath="$PROJECT_DIR$/target/tomcat/logs/ST4Example.log" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/logs/access_log.2018-01-31" afterPath="$PROJECT_DIR$/target/tomcat/logs/access_log.2018-01-31" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/Last/org/apache/jsp/page/administrator_jsp.java" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/Last/org/apache/jsp/page/administrator_jsp.java" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/Last/org/apache/jsp/page/admissionCrew_jsp.java" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/Last/org/apache/jsp/page/admissionCrew_jsp.java" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/Last/org/apache/jsp/page/changeEmployeeList_jsp.java" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/Last/org/apache/jsp/page/changeEmployeeList_jsp.java" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/Last/org/apache/jsp/page/changeEmployee_jsp.java" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/Last/org/apache/jsp/page/changeEmployee_jsp.java" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/Last/org/apache/jsp/page/changeFlightList_jsp.java" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/Last/org/apache/jsp/page/changeFlightList_jsp.java" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/Last/org/apache/jsp/page/changeFlight_jsp.java" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/Last/org/apache/jsp/page/changeFlight_jsp.java" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/Last/org/apache/jsp/page/deleteEmployee_jsp.java" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/Last/org/apache/jsp/page/deleteEmployee_jsp.java" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/Last/org/apache/jsp/page/deleteFlight_jsp.java" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/Last/org/apache/jsp/page/deleteFlight_jsp.java" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/Last/org/apache/jsp/page/flights_jsp.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/Last/org/apache/jsp/page/flights_jsp.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/Last/org/apache/jsp/page/login_jsp.java" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/Last/org/apache/jsp/page/login_jsp.java" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/Last/org/apache/jsp/page/main_jsp.class" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/Last/org/apache/jsp/page/main_jsp.class" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/Last/org/apache/jsp/page/main_jsp.java" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/Last/org/apache/jsp/page/main_jsp.java" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/Last/org/apache/jsp/page/newCrewList_jsp.java" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/Last/org/apache/jsp/page/newCrewList_jsp.java" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/Last/org/apache/jsp/page/newCrew_jsp.java" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/Last/org/apache/jsp/page/newCrew_jsp.java" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/Last/org/apache/jsp/page/newEmployee_jsp.java" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/Last/org/apache/jsp/page/newEmployee_jsp.java" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/Last/org/apache/jsp/page/newFlight_jsp.java" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/Last/org/apache/jsp/page/newFlight_jsp.java" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/Last/org/apache/jsp/page/registration_jsp.java" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/Last/org/apache/jsp/page/registration_jsp.java" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/Last/org/apache/jsp/page/searchingFlight_jsp.java" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/Last/org/apache/jsp/page/searchingFlight_jsp.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/web/command/DeleteFlight.java" afterPath="$PROJECT_DIR$/src/main/java/com/epam/web/command/DeleteFlight.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/web/command/Login.java" afterPath="$PROJECT_DIR$/src/main/java/com/epam/web/command/Login.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/web/command/NewCrew.java" afterPath="$PROJECT_DIR$/src/main/java/com/epam/web/command/NewCrew.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/web/command/NewEmployee.java" afterPath="$PROJECT_DIR$/src/main/java/com/epam/web/command/NewEmployee.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/web/command/NewFlight.java" afterPath="$PROJECT_DIR$/src/main/java/com/epam/web/command/NewFlight.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/web/command/PrepareAcceptCrew.java" afterPath="$PROJECT_DIR$/src/main/java/com/epam/web/command/PrepareAcceptCrew.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/web/command/PrepareChangeEmployee.java" afterPath="$PROJECT_DIR$/src/main/java/com/epam/web/command/PrepareChangeEmployee.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/web/command/PrepareChangeFlight.java" afterPath="$PROJECT_DIR$/src/main/java/com/epam/web/command/PrepareChangeFlight.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -86,36 +39,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="AllFlightsList.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/web/command/AllFlightsList.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="33" column="43" lean-forward="false" selection-start-line="33" selection-start-column="43" selection-end-line="33" selection-end-column="43" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ChangeEmployee.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/web/command/ChangeEmployee.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="37" column="43" lean-forward="false" selection-start-line="37" selection-start-column="43" selection-end-line="37" selection-end-column="43" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ChangeFlight.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/web/command/ChangeFlight.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="37" column="43" lean-forward="false" selection-start-line="37" selection-start-column="43" selection-end-line="37" selection-end-column="43" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Command.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/web/command/Command.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -126,78 +49,91 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DeleteEmployee.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="DeleteEmployee.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/web/command/DeleteEmployee.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="24" column="43" lean-forward="false" selection-start-line="24" selection-start-column="43" selection-end-line="24" selection-end-column="43" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MyFlightDAO.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/dao/impl/MyFlightDAO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="110">
-              <caret line="328" column="25" lean-forward="false" selection-start-line="328" selection-start-column="25" selection-end-line="328" selection-end-column="25" />
-              <folding>
-                <marker date="1517349488648" expanded="true" signature="387:697" ph="SELECT f.id,... flight" />
-                <marker date="1517349488648" expanded="true" signature="757:1045" ph="SELECT f.num... flight" />
-                <marker date="1517349488648" expanded="true" signature="1104:1152" ph="INSERT INTO flight... " />
-                <marker date="1517349488648" expanded="true" signature="1220:1270" ph="SELECT id\n plane" />
-                <marker date="1517349488648" expanded="true" signature="1340:1381" ph="SELECT id\n airport" />
-                <marker date="1517349488648" expanded="true" signature="1436:1470" ph="DELETE FROM flight... " />
-                <marker date="1517349488648" expanded="true" signature="1526:1663" ph="UPDATE flight... " />
-                <marker date="1517349488648" expanded="true" signature="1722:1743" ph="SELECT * FRO... airport" />
-                <marker date="1517349488648" expanded="true" signature="1810:2148" ph="SELECT f.num... flight" />
-                <marker date="1517349488648" expanded="true" signature="2203:2530" ph="SELECT f.num... flight" />
-                <marker date="1517349488648" expanded="true" signature="2591:2932" ph="SELECT f.id,... flight" />
-                <marker date="1517349488648" expanded="true" signature="2991:3332" ph="SELECT f.id,... flight" />
-                <marker date="1517349488648" expanded="true" signature="3829:3920" ph="SELECT f.num... flight" />
-                <marker date="1517349488648" expanded="true" signature="3989:4073" ph="SELECT f.id\... flight" />
-                <marker date="1517349488648" expanded="true" signature="4144:4208" ph="SELECT depar... flight" />
-                <marker date="1517349488648" expanded="true" signature="6585:6904" ph="SELECT f.num... flight" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/page/main.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="11" selection-end-column="44" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="registration.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/page/registration.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="44" column="52" lean-forward="false" selection-start-line="44" selection-start-column="52" selection-end-line="44" selection-end-column="52" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AcceptCrew.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/web/command/AcceptCrew.java">
-          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="170">
+              <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DeleteFlight.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/web/command/DeleteFlight.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Login.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/web/command/Login.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NewFlight.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/web/command/NewFlight.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
               <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TransactionManager.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/db/TransactionManager.java">
+      <file leaf-file-name="PrepareAcceptCrew.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/web/command/PrepareAcceptCrew.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="7" column="10" lean-forward="false" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
+            <state relative-caret-position="340">
+              <caret line="37" column="43" lean-forward="false" selection-start-line="37" selection-start-column="43" selection-end-line="37" selection-end-column="43" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PrepareChangeFlight.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/web/command/PrepareChangeFlight.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="24" column="77" lean-forward="false" selection-start-line="24" selection-start-column="77" selection-end-line="24" selection-end-column="77" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PrepareChangeEmployee.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/web/command/PrepareChangeEmployee.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NewEmployee.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/web/command/NewEmployee.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NewCrew.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/web/command/NewCrew.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -240,15 +176,7 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/log4j.properties" />
         <option value="$PROJECT_DIR$/src/main/java/com/epam/listener/ContextListener.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/epam/web/Controller.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/epam/web/command/DeleteFlight.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/epam/web/command/Login.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/epam/web/command/NewCrew.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/epam/web/command/NewFlight.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/epam/web/command/NewEmployee.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/page/images/temp.txt" />
-        <option value="$PROJECT_DIR$/src/main/java/com/epam/web/command/PrepareAcceptCrew.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/epam/web/command/PrepareChangeFlight.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/epam/web/command/PrepareChangeEmployee.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/epam/web/command/PrepareChangeThisEmployee.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/epam/web/command/PrepareChangeThisFlight.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/epam/web/command/PrepareDeleteEmployee.java" />
@@ -288,6 +216,14 @@
         <option value="$PROJECT_DIR$/src/main/java/com/epam/web/command/ChangeEmployee.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/epam/web/command/ChangeFlight.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/epam/web/command/DeleteEmployee.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/epam/web/command/DeleteFlight.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/epam/web/command/NewCrew.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/epam/web/command/Login.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/epam/web/command/NewEmployee.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/epam/web/command/NewFlight.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/epam/web/command/PrepareAcceptCrew.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/epam/web/command/PrepareChangeEmployee.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/epam/web/command/PrepareChangeFlight.java" />
       </list>
     </option>
   </component>
@@ -648,12 +584,12 @@
       <workItem from="1517221401781" duration="28475000" />
       <workItem from="1517319764176" duration="5963000" />
       <workItem from="1517325794963" duration="21397000" />
-      <workItem from="1517397026343" duration="31447000" />
+      <workItem from="1517397026343" duration="32050000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="285026000" />
+    <option name="totallyTimeSpent" value="285629000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -748,70 +684,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/web/command/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="31" lean-forward="false" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/web/command/NewCrew.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/web/command/NewEmployee.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="24" column="31" lean-forward="false" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/web/command/NewFlight.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/web/command/PrepareAcceptCrew.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="30" column="24" lean-forward="false" selection-start-line="30" selection-start-column="24" selection-end-line="30" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/web/command/PrepareChangeEmployee.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="15" column="76" lean-forward="false" selection-start-line="15" selection-start-column="76" selection-end-line="15" selection-end-column="76" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/web/command/PrepareChangeFlight.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="21" column="49" lean-forward="true" selection-start-line="21" selection-start-column="49" selection-end-line="21" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/web/command/PrepareChangeThisEmployee.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/web/command/PrepareChangeThisFlight.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -1173,8 +1045,72 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/web/command/DeleteEmployee.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/web/command/DeleteFlight.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
-          <caret line="24" column="43" lean-forward="false" selection-start-line="24" selection-start-column="43" selection-end-line="24" selection-end-column="43" />
+          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/web/command/NewCrew.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/web/command/Login.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/web/command/NewEmployee.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/web/command/NewFlight.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/web/command/PrepareAcceptCrew.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="37" column="43" lean-forward="false" selection-start-line="37" selection-start-column="43" selection-end-line="37" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/web/command/PrepareChangeEmployee.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/web/command/PrepareChangeFlight.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="24" column="77" lean-forward="false" selection-start-line="24" selection-start-column="77" selection-end-line="24" selection-end-column="77" />
           <folding />
         </state>
       </provider>
