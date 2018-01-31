@@ -12,7 +12,6 @@ public class CommandContainer {
     private static Map<String, Command> commands = new TreeMap<>();
 
     static {
-        commands.put("main",new Main());
         commands.put("listFlight",new AllFlightsList());
         commands.put("prepareFlight",new PrepareNewFlights());
         commands.put("newFlight",new NewFlight());

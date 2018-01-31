@@ -29,6 +29,7 @@ C:\EPAM\Last\src\main\java\com\epam\web\command\NewFlight.java
 C:\EPAM\Last\src\main\java\com\epam\dto\DateTimeParser.java
 C:\EPAM\Last\src\main\java\com\epam\dao\FlightDAO.java
 C:\EPAM\Last\src\main\java\com\epam\web\command\SortFlightByNumber.java
+C:\EPAM\Last\src\main\java\com\epam\filter\LangFilter.java
 C:\EPAM\Last\src\main\java\com\epam\web\Controller.java
 C:\EPAM\Last\src\main\java\com\epam\web\command\DeleteFlight.java
 C:\EPAM\Last\src\main\java\com\epam\web\command\AllFlightsList.java
@@ -43,7 +44,6 @@ C:\EPAM\Last\src\main\java\com\epam\dto\OperatorParser.java
 C:\EPAM\Last\src\main\java\com\epam\web\command\PrepareChangeEmployee.java
 C:\EPAM\Last\src\main\java\com\epam\web\command\PrepareChangeFlight.java
 C:\EPAM\Last\src\main\java\com\epam\dao\CrewDAO.java
-C:\EPAM\Last\src\main\java\com\epam\web\command\Main.java
 C:\EPAM\Last\src\main\java\com\epam\entity\Plane_Model.java
 C:\EPAM\Last\src\main\java\com\epam\web\command\NewCrew.java
 C:\EPAM\Last\src\main\java\com\epam\web\command\Login.java
@@ -60,6 +60,7 @@ C:\EPAM\Last\src\main\java\com\epam\dao\impl\MyFlightDAO.java
 C:\EPAM\Last\src\main\java\com\epam\web\command\AcceptCrew.java
 C:\EPAM\Last\src\main\java\com\epam\entity\Plane_Admission.java
 C:\EPAM\Last\src\main\java\com\epam\tag\LanguageTag.java
+C:\EPAM\Last\src\main\java\com\epam\db\TransactionManager.java
 C:\EPAM\Last\src\main\java\com\epam\web\command\PrepareNewFlights.java
 C:\EPAM\Last\src\main\java\com\epam\entity\Operator.java
 C:\EPAM\Last\src\main\java\com\epam\entity\Flight.java

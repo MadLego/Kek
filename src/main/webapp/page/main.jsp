@@ -20,7 +20,7 @@
     <link href="page/mainCSS.css" rel="stylesheet" type="text/css" media="screen" />
     <link href="page/searchCSS.css" rel="stylesheet" type="text/css" media="screen" />
 </head>
-<fmt:setLocale value="${currentLocale}" />
+<fmt:setLocale value="${currentLocale}" scope="session"/>
 <fmt:setBundle basename="FlightBundle" var="lang" />
 <body>
 <script type="text/javascript">
@@ -52,8 +52,6 @@
 </script>
 <my:my/>
 
-
-
 <div id="wrapper">
     <div id="menu-wrapper">
         <div id="menu" class="container">
@@ -61,7 +59,7 @@
                 <form action="Controller" name="command"  method="post">
                     <input type="hidden" name="command">
                 <li class="current_page_item"><a href="#"><fmt:message key="page.label.homePage" bundle="${lang}"/></a></li>
-                <li><a href="Controller?command=listFlight"><fmt:message key="page.label.flights" bundle="${lang}"/></a></li>
+                <li><a href="Controller?command=listFlight&language=${lang}"><fmt:message key="page.label.flights" bundle="${lang}"/></a></li>
                 <li><a href="administrator"><fmt:message key="page.label.administrator" bundle="${lang}"/></a></li>
                 <li><a href="Controller?command=listCrew"><fmt:message key="page.label.dispatcher" bundle="${lang}"/></a></li>
                 <li><a href="login"><fmt:message key="page.label.login" bundle="${lang}"/></a></li>

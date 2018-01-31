@@ -2,6 +2,7 @@ com\epam\web\command\PrepareAcceptCrew.class
 com\epam\web\command\SearchFlightByAirport.class
 com\epam\web\command\AllFlightsList.class
 com\epam\dao\OperatorDAO.class
+com\epam\filter\LangFilter.class
 com\epam\dto\OperatorParser.class
 com\epam\web\command\SortFlightByName.class
 com\epam\Path.class
@@ -32,6 +33,7 @@ com\epam\tag\LanguageTag.class
 com\epam\web\command\CommandContainer.class
 com\epam\web\command\PrepareChangeFlight.class
 com\epam\dto\CrewParser.class
+com\epam\db\TransactionManager.class
 com\epam\web\command\PrepareDeleteEmployee.class
 com\epam\dto\DateTimeParser.class
 com\epam\dao\impl\MyCrewDAO.class
@@ -56,7 +58,6 @@ com\epam\web\command\DeleteEmployee.class
 com\epam\entity\Plane_Model.class
 com\epam\web\command\PrepareNewCrew.class
 com\epam\entity\Plane_Admission.class
-com\epam\web\command\Main.class
 com\epam\entity\Flight.class
 com\epam\entity\Search.class
 com\epam\entity\CrewView.class

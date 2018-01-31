@@ -5,6 +5,7 @@ import com.epam.dao.impl.MyCrewDAO;
 import com.epam.dao.impl.MyEmployeeDAO;
 import com.epam.dao.impl.MyFlightDAO;
 import com.epam.db.DBManager;
+import com.epam.db.TransactionManager;
 import org.apache.log4j.Logger;
 
 import javax.servlet.ServletException;
@@ -21,8 +22,8 @@ public class AcceptCrew extends Command {
 
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+        Connection connection = TransactionManager.prepareConection(DBManager.getInstance().getConnection());
         LOG.debug("Command starts");
-        Connection connection = DBManager.getInstance().getConnection();
         String decision = request.getParameter("admission");
 
         LOG.trace("Decision of user: menuItemsList --> " + decision);
@@ -40,7 +41,7 @@ public class AcceptCrew extends Command {
         }
 
         LOG.debug("Command finished");
-
+        TransactionManager.close(connection);
         return Path.CREW_RETURN_LIST_CREW;
     }
 
