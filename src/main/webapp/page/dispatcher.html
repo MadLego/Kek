@@ -1,0 +1,66 @@
+	<!DOCTYPE html>
+	<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Dispetcher</title>
+		<link rel="stylesheet" href="administrator.css" media="screen" type="text/css" />
+		<link rel="stylesheet" href="limk.css" media="screen" type="text/css" />
+		<link href="http://fonts.googleapis.com/css?family=Oswald:400,300" rel="stylesheet" type="text/css" />
+
+	</head>
+	<body>
+
+	<div id="wrapper">
+		<div id="menu-wrapper">
+			<div id="menu" class="container">
+				<ul class="menu">
+					<li><a href="main.html">Homepage</a></li>
+					<li><a href="flights.html">Flights</a></li>
+					<li><a href="administrator.html">Administrator</a></li>
+					<li class="current_page_item"><a href="#">Dispetcher</a></li>
+					<li ><a href="login.html">Login</a></li>
+					<li><a href="registration.html">Registration</a></li>
+				</ul>
+			</div>
+		</div>
+		<div>
+			<table class="simple-little-table" cellspacing='0'>
+		<tr>
+			<th>Flight Number </th>
+			<th>Pilot </th>
+			<th>Navigator </th>
+			<th>Radio Operator </th>
+			<th>First Stewardess </th>
+			<th>Second Stewardess </th>
+			<th>Apply</th>
+		</tr><!-- Table Header -->
+
+		<form action="Controller" method="post">
+		<tr>
+			<td><select>
+				<option>Электроник</option>
+			</select></td>
+			<td><select>
+				<option>Электроник</option>
+			</select></td>
+			<td><select>
+				<option>Электроник</option>
+			</select></td>
+			<td><select>
+				<option>Электроник</option>
+			</select></td>
+			<td><select>
+				<option>Кукушкина</option>
+			</select></td>
+			<td>
+				<input type="submit" name="command" value="createCommand"/>
+			</td>
+		</form>
+		</tr><!-- Table Row -->
+	
+		
+	</table>
+		</div>
+	</div>
+	</body>
+	</html>

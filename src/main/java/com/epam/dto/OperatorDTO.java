@@ -1,0 +1,84 @@
+package com.epam.dto;
+
+public class OperatorDTO {
+    int id;
+    String email;
+    String login;
+    String password;
+    int op_type_id;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getLogin() {
+        return login;
+    }
+
+    public void setLogin(String login) {
+        this.login = login;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public int getOp_type_id() {
+        return op_type_id;
+    }
+
+    public void setOp_type_id(int op_type_id) {
+        this.op_type_id = op_type_id;
+    }
+
+    @Override
+    public String toString() {
+        return "OperatorDTO{" +
+                "id=" + id +
+                ", email='" + email + '\'' +
+                ", login='" + login + '\'' +
+                ", password='" + password + '\'' +
+                ", op_type_id=" + op_type_id +
+                '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof OperatorDTO)) return false;
+
+        OperatorDTO that = (OperatorDTO) o;
+
+        if (id != that.id) return false;
+        if (op_type_id != that.op_type_id) return false;
+        if (email != null ? !email.equals(that.email) : that.email != null) return false;
+        if (login != null ? !login.equals(that.login) : that.login != null) return false;
+        return password != null ? password.equals(that.password) : that.password == null;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = id;
+        result = 31 * result + (email != null ? email.hashCode() : 0);
+        result = 31 * result + (login != null ? login.hashCode() : 0);
+        result = 31 * result + (password != null ? password.hashCode() : 0);
+        result = 31 * result + op_type_id;
+        return result;
+    }
+}

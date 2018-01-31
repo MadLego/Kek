@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Admin</title>
+	<link rel="stylesheet" href="page/administrator.CSS" media="screen" type="text/css" />
+	<link href="http://fonts.googleapis.com/css?family=Oswald:400,300" rel="stylesheet" type="text/css" />
+
+</head>
+<body>
+
+<div id="wrapper">
+	<div id="menu-wrapper">
+		<div id="menu" class="container">
+			<ul>
+				<li><a href="main.html">Homepage</a></li>
+				<li><a href="flights.html">Flights</a></li>
+				<li class="current_page_item"><a href="#">Administrator</a></li>
+				<li><a href="dispatcher.html">Dispetcher</a></li>
+				<li ><a href="login.html">Login</a></li>
+				<li><a href="registration.html">Registration</a></li>
+			</ul>
+		</div>
+	</div>
+	<div>
+		<a href="Controller?command=prepareFlight" class="button7">New Flight</a>
+		<a href="Controller?command=listFlightForChange" class="button7">Change Flight</a>
+		<a href="Controller?command=listFlightForDelete" class="button7">Delete Flight</a>
+		<a href="?command=prepareEmployee" class="button7">New Employee</a>
+		<a href="changeEmployee.html" class="button7">Change Employee</a>
+		<a href="deleteEmployee.html" class="button7">Delete Employee</a>
+	</div>
+</div>
+</body>
+</html>

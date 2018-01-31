@@ -1,0 +1,57 @@
+package com.epam.web.command;
+
+import com.epam.Path;
+import com.epam.db.DBManager;
+import com.epam.dto.FlightParser;
+import com.epam.entity.Flight;
+import com.epam.dao.impl.MyFlightDAO;
+import org.apache.log4j.Logger;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.util.ArrayList;
+
+public class NewFlight extends Command {
+    private static final Logger LOG = Logger.getLogger(NewFlight.class);
+
+    @Override
+    public String execute(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+        LOG.debug("Command starts");
+
+        Flight f = newFlight(request);
+        LOG.trace("New Flight --> "+f);
+
+        ArrayList<String> list = validateNewFlight(f);
+        if (list.isEmpty()) {
+            new MyFlightDAO().newFlight(DBManager.getInstance().getConnection(), f);
+        }else {
+            LOG.trace("Errors --> "+list);
+            request.setAttribute("errors",list);
+            return Path.FLIGHTS_NEW;
+        }
+        LOG.debug("Command finished");
+
+        return Path.FLIGHTS_LIST;
+    }
+
+    Flight newFlight(HttpServletRequest req) {
+        MyFlightDAO flightDAO = new MyFlightDAO();
+        return flightDAO.fillFlight(DBManager.getInstance().getConnection(), FlightParser.flightDTOparser(req));
+    }
+
+    private ArrayList<String> validateNewFlight(Flight flight) {
+        ArrayList<String> list = new ArrayList<>();
+        if (flight.getDeparture_time().after(flight.getLanding_time())){
+            list.add("Back to the Future?");
+        }
+        if(flight.getDeparture_airport_id()==flight.getLanding_airport_id()){
+            list.add("You can not fly to the same airport");
+        }
+        if (flight.getNumber().equals("")){
+            list.add("Flight number cannot be empty");
+        }
+        return list;
+    }
+}

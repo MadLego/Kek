@@ -1,0 +1,7 @@
+    private static final Logger LOG = Logger.getLogger(NewFlight.class);
+
+        LOG.debug("Command starts");
+
+            LOG.trace("New Flight --> "+f);
+
+        LOG.debug("Command finished");

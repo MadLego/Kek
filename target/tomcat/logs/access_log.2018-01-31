@@ -1,0 +1,12 @@
+0:0:0:0:0:0:0:1 - - [31/Jan/2018:20:48:35 +0200] "GET /Last/main HTTP/1.1" 200 3577 http-bio-8888-exec-1 119
+0:0:0:0:0:0:0:1 - - [31/Jan/2018:20:49:17 +0200] "GET /Last/Controller?command=listFlight HTTP/1.1" 200 7157 http-bio-8888-exec-2 459
+0:0:0:0:0:0:0:1 - - [31/Jan/2018:20:49:20 +0200] "GET /Last/main HTTP/1.1" 200 3577 http-bio-8888-exec-3 4
+0:0:0:0:0:0:0:1 - - [31/Jan/2018:20:55:31 +0200] "GET /Last/main HTTP/1.1" 200 4009 http-bio-8888-exec-5 114
+0:0:0:0:0:0:0:1 - - [31/Jan/2018:20:55:32 +0200] "GET /Last/main?&%5Bobject%20HTMLFormElement%5D=%5Bobject%20HTMLInputElement%5D HTTP/1.1" 200 4009 http-bio-8888-exec-6 2
+0:0:0:0:0:0:0:1 - - [31/Jan/2018:20:55:35 +0200] "GET /Last/main?&%5Bobject%20HTMLFormElement%5D=%5Bobject%20HTMLInputElement%5D HTTP/1.1" 200 4009 http-bio-8888-exec-7 2
+0:0:0:0:0:0:0:1 - - [31/Jan/2018:20:55:36 +0200] "GET /Last/main?&%5Bobject%20HTMLFormElement%5D=%5Bobject%20HTMLInputElement%5D HTTP/1.1" 200 4009 http-bio-8888-exec-8 2
+0:0:0:0:0:0:0:1 - - [31/Jan/2018:20:55:52 +0200] "GET /Last/main?&%5Bobject%20HTMLFormElement%5D=%5Bobject%20HTMLInputElement%5D HTTP/1.1" 200 4009 http-bio-8888-exec-10 3
+0:0:0:0:0:0:0:1 - - [31/Jan/2018:20:55:52 +0200] "GET /Last/main?&%5Bobject%20HTMLFormElement%5D=%5Bobject%20HTMLInputElement%5D HTTP/1.1" 200 4009 http-bio-8888-exec-10 1
+0:0:0:0:0:0:0:1 - - [31/Jan/2018:20:58:14 +0200] "GET /Last/main?&%5Bobject%20HTMLFormElement%5D=%5Bobject%20HTMLInputElement%5D HTTP/1.1" 200 4078 http-bio-8888-exec-3 123
+0:0:0:0:0:0:0:1 - - [31/Jan/2018:20:59:27 +0200] "GET /Last/main?&%5Bobject%20HTMLFormElement%5D=%5Bobject%20HTMLInputElement%5D HTTP/1.1" 200 4078 http-bio-8888-exec-5 130
+0:0:0:0:0:0:0:1 - - [31/Jan/2018:20:59:29 +0200] "GET /Last/main?&%5Bobject%20HTMLFormElement%5D=%5Bobject%20HTMLInputElement%5D HTTP/1.1" 200 4078 http-bio-8888-exec-5 1
