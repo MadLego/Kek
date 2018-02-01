@@ -77,7 +77,7 @@
         </fieldset>
     </form>
     <p style="color: red"><c:out value="${validate}"/></p>
-    <p><fmt:message key="registration.label.haveAnAccount" bundle="${lang}"/> &nbsp;&nbsp;<a href="login.html"><fmt:message key="page.label.login" bundle="${lang}"/></a><span class="fontawesome-arrow-right"></span></p>
+    <p><fmt:message key="registration.label.haveAnAccount" bundle="${lang}"/> &nbsp;&nbsp;<a href="login"><fmt:message key="page.label.login" bundle="${lang}"/></a><span class="fontawesome-arrow-right"></span></p>
 </div>
 </body>
 </html>

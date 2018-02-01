@@ -5,6 +5,7 @@ import com.epam.db.DBManager;
 import com.epam.db.TransactionManager;
 import com.epam.entity.Operator;
 import com.epam.dao.impl.MyOperatorDAO;
+import org.apache.commons.codec.digest.DigestUtils;
 import org.apache.log4j.Logger;
 
 import javax.servlet.ServletException;
@@ -22,7 +23,7 @@ public class Login extends Command {
 
         Connection connection = TransactionManager.prepareConection(DBManager.getInstance().getConnection());
 
-        Operator operator = new MyOperatorDAO().login(connection,request.getParameter("username"));
+        Operator operator = new MyOperatorDAO().login(connection,request.getParameter("username").trim());
         LOG.trace("User"+operator);
         String result = checkLogin(operator,request);
         if (result.equals("")){
@@ -38,12 +39,16 @@ public class Login extends Command {
     }
     String checkLogin(Operator operator,HttpServletRequest req){
         try {
-            if (operator.getLogin().equals(req.getParameter("username"))&&operator.getPassword().equals(req.getParameter("password"))){
+            if (operator.getLogin().equals(req.getParameter("username"))&&operator.getPassword().equals(hashPassword(req.getParameter("password")))){
                 return "";
             }
         }catch (Exception e) {
             return "Bad parameter";
         }
         return "Bad parameter";
+    }
+
+    public String hashPassword(String password){
+        return DigestUtils.md5Hex(password);
     }
 }

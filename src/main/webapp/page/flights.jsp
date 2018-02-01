@@ -67,27 +67,74 @@
     </div>
     <div>
         <div style="margin-bottom: 100px; margin-top: 50px; color: black " align="center">
-            <h2>Flight selection by parameter</h2>
+            <h2><fmt:message key="flight.label.selectionByParams" bundle="${lang}"/></h2>
             <form action="Controller" name="command" method="post">
                 <input type="hidden" name="command" value="sampleFlight">
                 <select name="sortFlightBy">
+                    <c:set var="sortFlight" value="${sortFlightBy}"/>
+                    <c:if test="${sortFlight != null}">
+                        <option><c:out value="${sortFlight}"/></option>
+                    </c:if>
                     <option></option>
-                    <option>Sort By Number</option>
-                    <option>Sort By Name</option>
+                    <c:choose>
+                    <c:when test="${sortFlight != null}">
+                        <c:choose>
+                        <c:when test="${sortFlight eq 'Sort By Number'}">
+                        </c:when>
+                        <c:otherwise>
+                            <option>S<fmt:message key="flight.label.sortByNumber" bundle="lang"/></option>
+                        </c:otherwise>
+                        </c:choose>
+                        <c:choose>
+                            <c:when test="${sortFlight eq 'Sort By Name'}">
+                            </c:when>
+                            <c:otherwise>
+                                <option><fmt:message key="flight.label.sortByName" bundle="lang"/></option>
+                            </c:otherwise>
+                        </c:choose>
+                    </c:when>
+                    <c:otherwise>
+                        <option><fmt:message key="flight.label.sortByNumber" bundle="lang"/> </option>
+                        <option><fmt:message key="flight.label.sortByName" bundle="lang"/></option>
+                    </c:otherwise>
+                    </c:choose>
                 </select>
                 <select name="searchDepartureFlight">
+                    <c:if test="${departureFlightChoice!=null}">
+                        <c:set var="departureF" value="${departureFlightChoice}"/>
+                    </c:if>
+                    <c:if test="${departureF != null}">
+                        <option><c:out value="${departureF}"/></option>
+                    </c:if>
                     <option></option>
                     <c:forEach var="item" items="${airportList}">
+                        <c:if test="${departureF ne item.name}">
                         <option><c:out value="${item.name}"/></option>
+                        </c:if>
                     </c:forEach>
                 </select>
                 <select name="searchLandingFlight">
+                    <c:if test="${landingFlightChoice!=null}">
+                        <c:set var="landingF" value="${landingFlightChoice}"/>
+                    </c:if>
+                    <c:if test="${landingF != null}">
+                        <option><c:out value="${landingF}"/></option>
+                    </c:if>
                     <option></option>
                     <c:forEach var="item" items="${airportList}">
-                        <option><c:out value="${item.name}"/></option>
+                        <c:if test="${landingF ne item.name}">
+                            <option><c:out value="${item.name}"/></option>
+                        </c:if>
                     </c:forEach>
                 </select>
-                <input type="date" name="date">
+                <c:choose>
+                <c:when test="${departureDateChoice!=null}">
+                <input type="date" name="date" value="${departureDateChoice}">
+                </c:when>
+                <c:otherwise>
+                    <input type="date" name="date">
+                </c:otherwise>
+                </c:choose>
                 <input type="submit" value="Sort" name="Submit">
             </form>
         </div>

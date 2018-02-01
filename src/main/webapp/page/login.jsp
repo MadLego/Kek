@@ -77,7 +77,7 @@
         </fieldset>
     </form>
     <p style="color: red"><c:out value="${loginResult}"/></p>
-    <p><fmt:message key="login.label.noAccountYet" bundle="${lang}"/> &nbsp;&nbsp;<a href="page/registration.html"><fmt:message key="page.label.registration" bundle="${lang}"/></a><span class="fontawesome-arrow-right"></span></p>
+    <p><fmt:message key="login.label.noAccountYet" bundle="${lang}"/> &nbsp;&nbsp;<a href="registration"><fmt:message key="page.label.registration" bundle="${lang}"/></a><span class="fontawesome-arrow-right"></span></p>
 </div>
 </body>
 </html>

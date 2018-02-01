@@ -24,6 +24,7 @@ com\epam\dto\EmployeeParser.class
 com\epam\entity\Plane.class
 com\epam\entity\Airport.class
 com\epam\web\command\ChangeFlight.class
+com\epam\captcha\MyCaptcha.class
 com\epam\dto\EmployeeDTO.class
 com\epam\dao\impl\MyEmployeeDAO.class
 com\epam\entity\OperatorType.class

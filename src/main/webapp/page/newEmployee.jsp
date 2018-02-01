@@ -77,11 +77,11 @@
             <form action="Controller" method="post">
                 <input type="hidden" name="command" value="newEmployee"/>
             <tr>
-                <td><input type="text" placeholder="Name"
+                <td><input type="text" placeholder="<fmt:message key="employee.label.firstName" bundle="lang"/>"
                            pattern="([A-ZА-Я]{1}[a-zа-я]+)"
                            name="name" required/>
                     <span class="validity"/></td>
-                <td><input type="text" placeholder="Surname"
+                <td><input type="text" placeholder="<fmt:message key="employee.label.lstName" bundle="lang"/>"
                            pattern="([A-ZА-Я]{1}[a-zа-я]+)"
                            name="surName" required/>
                     <span class="validity"/></td>
@@ -90,14 +90,14 @@
                            min="18" step="1" max="100" required/>
                     <span class="validity"/></td>
                 <td><select name="admission">
-                    <option>True</option>
-                    <option>False</option>
+                    <option><fmt:message key="label.vew.true" bundle="lang"/></option>
+                    <option><fmt:message key="label.vew.false" bundle="lang"/></option>
                 </select></td>
                 <td><select name="role">
-                    <option value="conductor">Stewardess</option>
-                    <option value="navigator">Navigator</option>
-                    <option value="pilot">Pilot</option>
-                    <option value="radio_operator">Radio Operator</option>
+                    <option value="conductor"><fmt:message key="crewAdmission.label.stewardess" bundle="lang"/></option>
+                    <option value="navigator"><fmt:message key="crewAdmission.label.navigator" bundle="lang"/></option>
+                    <option value="pilot"><fmt:message key="crewAdmission.label.pilot" bundle="lang"/></option>
+                    <option value="radio_operator"><fmt:message key="crewAdmission.label.radioOperator" bundle="lang"/></option>
                 </select></td>
                 <td><form action="main.html">
                     <input type="submit" name="Change"/>

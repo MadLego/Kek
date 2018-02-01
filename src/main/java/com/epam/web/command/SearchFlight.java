@@ -2,6 +2,7 @@ package com.epam.web.command;
 
 import com.epam.Path;
 import com.epam.db.DBManager;
+import com.epam.db.TransactionManager;
 import com.epam.entity.Flight;
 import com.epam.dao.impl.MyFlightDAO;
 import org.apache.log4j.Logger;
@@ -10,6 +11,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.sql.Connection;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -20,7 +22,9 @@ public class SearchFlight extends Command {
     public String execute(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         LOG.debug("Command starts");
 
-        ArrayList<Flight> flights = new MyFlightDAO().searchFlight(DBManager.getInstance().getConnection(),request.getParameter("searchItem"));
+        Connection connection = TransactionManager.prepareConection(DBManager.getInstance().getConnection());
+
+        ArrayList<Flight> flights = new MyFlightDAO().searchFlight(connection,request.getParameter("searchItem"));
         LOG.trace("List of flights --> "+flights);
         String result=validate(flights);
         if (!result.equals("OK")){
@@ -29,6 +33,8 @@ public class SearchFlight extends Command {
         }else {
             request.setAttribute("searchingFlight", flights);
         }
+        LOG.debug("Command finished");
+
         return Path.FLIGHTS_SEARCHING;
     }
 

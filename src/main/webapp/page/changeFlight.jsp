@@ -85,7 +85,7 @@
                                maxlength="6"
                                name="name"
                                value="${item.name}"
-                               placeholder="Enter Flight Number"/>
+                               placeholder="<fmt:message key="label.hint.enterFlightNumber" bundle="lang"/>"/>
                         <span class="validity"></span></td>
                     <td><select autofocus="" name="plane" required>
                         <c:set var="plane" value="${item.plane}"/>

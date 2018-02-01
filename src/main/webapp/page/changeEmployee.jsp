@@ -78,11 +78,11 @@
             <tr>
             <c:forEach var="item" items="${changeThisEmployee}">
                 <td style="display:none;"><input type="hidden" name="id" value="${item.id}"></td>
-                <td><input type="text" placeholder="Name"
+                <td><input type="text" placeholder="<fmt:message key="employee.label.firstName" bundle="lang"/>"
                 pattern="([A-Z]{1}[a-z]+)"
                 name="name" value="${item.firstName}" required/>
                     <span class="validity"/></td>
-                <td><input type="text" placeholder="Surname"
+                <td><input type="text" placeholder="<fmt:message key="employee.label.lstName" bundle="lang"/>"
                 pattern="([A-Z]{1}[a-z]+)"
                 name="surName" value="${item.lastName}"required/>
                     <span class="validity"/></td>
@@ -91,8 +91,8 @@
                     <span class="validity"></span></td>
                 </td>
                 <td><select name="admission">
-                    <option>True</option>
-                    <option>False</option>
+                    <option><fmt:message key="label.vew.true" bundle="lang"/></option>
+                    <option><fmt:message key="label.vew.false" bundle="lang"/></option>
                 </select></td>
                 <td><select name="role">
                 <c:forEach var="i" items="${roleList}">

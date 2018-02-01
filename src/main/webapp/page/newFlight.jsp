@@ -83,7 +83,7 @@
                            minlength="3"
                            maxlength="6"
                            name="name"
-                           placeholder="Enter Flight Number"/>
+                           placeholder="<fmt:message key="label.hint.enterFlightNumber" bundle="lang"/>"/>
                     <span class="validity"></span></td>
                 <td><select autofocus="" name="plane" required>
                         <c:forEach var="item" items="${prepareFlight}">
