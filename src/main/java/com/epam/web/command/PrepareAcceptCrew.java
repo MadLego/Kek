@@ -26,7 +26,7 @@ public class PrepareAcceptCrew extends Command {
     public String execute(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         LOG.debug("Command starts");
 
-        Connection connection = TransactionManager.prepareConection(DBManager.getInstance().getConnection());
+        Connection connection = TransactionManager.prepareConnection(DBManager.getInstance().getConnection());
 
 
         List<Crew> crews= new MyCrewDAO().showAllCrew(connection);

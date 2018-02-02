@@ -20,7 +20,7 @@ public class AllFlightsList extends Command {
 
     public String execute(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         LOG.debug("Command starts");
-        Connection connection = TransactionManager.prepareConection(DBManager.getInstance().getConnection());
+        Connection connection = TransactionManager.prepareConnection(DBManager.getInstance().getConnection());
 
         List<Flight> flightList = new MyFlightDAO().showAllFlights(connection);
         LOG.trace("Found in DB: flightList --> " + flightList);

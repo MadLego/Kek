@@ -22,23 +22,34 @@ public class Registration extends Command {
     public String execute(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         LOG.debug("Command starts");
 
-        Connection connection = TransactionManager.prepareConection(DBManager.getInstance().getConnection());
+        Connection connection = TransactionManager.prepareConnection(DBManager.getInstance().getConnection());
 
         MyOperatorDAO dao = new MyOperatorDAO();
         Operator o = dao.fillOperator(OperatorParser.operatorDTOparser(request));
         o.setPassword(hashPassword(o.getPassword()));
-        LOG.trace("Operator --> "+o);
+        boolean val = answerCaptcha(request);
+        if (!val){
+            request.setAttribute("validate","Wrong captcha");
+            LOG.trace("Wrong captcha");
+            return Path.OPERATOR_REGISTRATION;
+        }
         String attr = dao.registration(connection,o);
-        request.setAttribute("validate",attr);
+        o.setPassword(hashPassword(o.getPassword()));
         if (attr.equals("Bad idea")){
-            LOG.trace("Illegal argument for registration ");
+            request.setAttribute("validate","Illegal argument for registration");
+            LOG.trace("Illegal argument for registration");
             return Path.OPERATOR_REGISTRATION;
         }
         LOG.debug("Command finished");
         return Path.OPERATOR_LOGIN;
     }
 
-    public String hashPassword(String password){
+    boolean answerCaptcha(HttpServletRequest request){
+        String reqCaptcha = request.getParameter("captcha");
+        return reqCaptcha.equals(request.getSession().getAttribute("answer"));
+    }
+
+    private String hashPassword(String password){
         return DigestUtils.md5Hex(password);
     }
 }

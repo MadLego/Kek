@@ -100,7 +100,7 @@
                 </c:forEach>
                 </select></td>
                 <td>
-                        <input type="submit" name="change"/>
+                        <input type="submit" name="change" value="<fmt:message key="flight.label.changeFlight" bundle="${lang}"/>"/>
                 </td>
             </c:forEach>
             </tr>

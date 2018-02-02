@@ -9,6 +9,8 @@ public class Path{
     public static final String FLIGHTS_NEW = "/newFlight";
     public static final String FLIGHTS_SEARCHING = "/searchingFlight";
     public static final String PAGE_ERROR_PAGE="/errors";
+    public static final String FLIGHT_RETURN_LIST_FOR_CHANGE="Controller?command=listFlightForChange";
+    public static final String FLIGHT_RETURN_LIST="Controller?command=listFlight";
 
     public static final String EMPLOYEE_NEW="/newEmployee";
     public static final String EMPLOYEES_LIST_FOR_DELETE ="/listDeleteEmployees";

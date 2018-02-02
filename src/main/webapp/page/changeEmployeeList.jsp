@@ -83,7 +83,7 @@
                         <td><input type="hidden" name="age" value="${item.age}"><c:out value="${item.age}"/></td>
                         <td><input type="hidden" name="permission" value="${item.isPermittedView}"><c:out value="${item.isPermittedView}"/></td>
                         <td><input type="hidden" name="role" value="${item.role}"><c:out value="${item.role}"/></td>
-                        <td><input type="submit" value="Change"></td>
+                        <td><input type="submit" value="<fmt:message key="flight.label.changeFlight" bundle="${lang}"/>"></td>
                     </tr><!-- Table Row -->
                 </form>
             </c:forEach>

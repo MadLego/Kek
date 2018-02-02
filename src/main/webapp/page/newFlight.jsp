@@ -37,15 +37,14 @@
         }
     }
 </script>
+<html>
 <fmt:setLocale value="${currentLocale}" scope="session"/>
 <fmt:setBundle basename="FlightBundle" var="lang" />
-<html>
 <head>
     <meta charset="UTF-8">
     <title><fmt:message key="page.label.administrator" bundle="${lang}"/></title>
     <link rel="stylesheet" href="page/administrator.CSS" media="screen" type="text/css" />
     <link href="http://fonts.googleapis.com/css?family=Oswald:400,300" rel="stylesheet" type="text/css" />
-
 </head>
 <body>
 <my:my/>
@@ -83,7 +82,7 @@
                            minlength="3"
                            maxlength="6"
                            name="name"
-                           placeholder="<fmt:message key="label.hint.enterFlightNumber" bundle="lang"/>"/>
+                           placeholder="<fmt:message key="label.hint.enterFlightNumber" bundle="${lang}"/>"/>
                     <span class="validity"></span></td>
                 <td><select autofocus="" name="plane" required>
                         <c:forEach var="item" items="${prepareFlight}">
@@ -108,7 +107,7 @@
                 </td>
                 <td><input type="datetime-local" name="landing_time" required/></td>
                 <td>
-                    <input type="submit" value="Submit"/>
+                    <input type="submit" value="<fmt:message key="flight.label.submit" bundle="${lang}"/>"/>
                 </td>
             </tr><!-- Table Row -->
             </form>

@@ -86,7 +86,7 @@
                         <td><input type="hidden" name="departure_time" value="${item.departure_time}"><c:out value="${item.departure_time}"/></td>
                         <td><c:out value="${item.landing_airport}"/></td>
                         <td><input type="hidden" type="hidden" name="landing_time" value="${item.landing_time}"><c:out value="${item.landing_time}"/></td>
-                        <td><input type="submit" name="command" value="newThisCrew"></td>
+                        <td><input type="submit" name="command" value="<fmt:message key="label.view.new" bundle="${lang}"/>"></td>
                     </tr><!-- Table Row -->
                 </form>
             </c:forEach>

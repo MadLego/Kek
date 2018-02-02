@@ -7,7 +7,7 @@
 --%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib uri="/WEB-INF/language.tld" prefix="mytag"%>
 <%@ taglib prefix="my" uri="mytaglib.tld" %>
 <script type="text/javascript">
@@ -41,7 +41,7 @@
 <fmt:setBundle basename="FlightBundle" var="lang" />
 <html>
 <head>
-    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title><fmt:message key="page.label.administrator" bundle="${lang}"/></title>
     <link rel="stylesheet" href="page/administrator.CSS" media="screen" type="text/css" />
     <link href="http://fonts.googleapis.com/css?family=Oswald:400,300" rel="stylesheet" type="text/css" />
@@ -77,11 +77,11 @@
             <form action="Controller" method="post">
                 <input type="hidden" name="command" value="newEmployee"/>
             <tr>
-                <td><input type="text" placeholder="<fmt:message key="employee.label.firstName" bundle="lang"/>"
+                <td><input type="text" placeholder="<fmt:message key="employee.label.firstName" bundle="${lang}"/>"
                            pattern="([A-ZА-Я]{1}[a-zа-я]+)"
                            name="name" required/>
                     <span class="validity"/></td>
-                <td><input type="text" placeholder="<fmt:message key="employee.label.lstName" bundle="lang"/>"
+                <td><input type="text" placeholder="<fmt:message key="employee.label.lstName" bundle="${lang}"/>"
                            pattern="([A-ZА-Я]{1}[a-zа-я]+)"
                            name="surName" required/>
                     <span class="validity"/></td>
@@ -90,17 +90,17 @@
                            min="18" step="1" max="100" required/>
                     <span class="validity"/></td>
                 <td><select name="admission">
-                    <option><fmt:message key="label.vew.true" bundle="lang"/></option>
-                    <option><fmt:message key="label.vew.false" bundle="lang"/></option>
+                    <option><fmt:message key="label.vew.true" bundle="${lang}"/></option>
+                    <option><fmt:message key="label.vew.false" bundle="${lang}"/></option>
                 </select></td>
                 <td><select name="role">
-                    <option value="conductor"><fmt:message key="crewAdmission.label.stewardess" bundle="lang"/></option>
-                    <option value="navigator"><fmt:message key="crewAdmission.label.navigator" bundle="lang"/></option>
-                    <option value="pilot"><fmt:message key="crewAdmission.label.pilot" bundle="lang"/></option>
-                    <option value="radio_operator"><fmt:message key="crewAdmission.label.radioOperator" bundle="lang"/></option>
+                    <option value="conductor"><fmt:message key="crewAdmission.label.stewardess" bundle="${lang}"/></option>
+                    <option value="navigator"><fmt:message key="crewAdmission.label.navigator" bundle="${lang}"/></option>
+                    <option value="pilot"><fmt:message key="crewAdmission.label.pilot" bundle="${lang}"/></option>
+                    <option value="radio_operator"><fmt:message key="crewAdmission.label.radioOperator" bundle="${lang}"/></option>
                 </select></td>
-                <td><form action="main.html">
-                    <input type="submit" name="Change"/>
+                <td><form action="main">
+                    <input type="submit" name="<fmt:message key="flight.label.changeFlight" bundle="${lang}"/>"/>
                 </form></td>
             </tr><!-- Table Row -->
             </form>

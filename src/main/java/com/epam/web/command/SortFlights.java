@@ -23,7 +23,7 @@ public class SortFlights extends Command {
     public String execute(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         LOG.debug("Command starts");
 
-        Connection connection = TransactionManager.prepareConection(DBManager.getInstance().getConnection());
+        Connection connection = TransactionManager.prepareConnection(DBManager.getInstance().getConnection());
 
         String query = chooseTheSearch(request.getParameterNames(),request);
         Search search =  fillSearch(request);

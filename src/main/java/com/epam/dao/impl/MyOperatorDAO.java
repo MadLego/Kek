@@ -20,21 +20,17 @@ public class MyOperatorDAO implements OperatorDAO {
         Operator operator = new Operator();
         PreparedStatement ps;
         ResultSet rs;
-        Connection con;
         try {
-            con = connection;
             int k = 1;
-            ps = con.prepareCall(SQL_LOGIN);
+            ps = connection.prepareCall(SQL_LOGIN);
             ps.setString(k, login);
             rs = ps.executeQuery();
             while (rs.next()) {
                 operator = extractPrepareOperator(rs);
             }
-            con.commit();
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        System.out.println(operator);
         return operator;
     }
 
@@ -60,7 +56,6 @@ public class MyOperatorDAO implements OperatorDAO {
 
     @Override
     public String registration(Connection connection, Operator operator) {
-        System.out.println(operator);
         String result="";
         try {
             if (validateRegistration(connection, operator).equals("False")){
@@ -78,7 +73,6 @@ public class MyOperatorDAO implements OperatorDAO {
             result = "Bad idea";
             e.printStackTrace();
         }
-        System.out.println("result "+result);
         return result;
     }
 
@@ -86,11 +80,9 @@ public class MyOperatorDAO implements OperatorDAO {
         String result="False";
         PreparedStatement ps;
         ResultSet rs;
-        Connection con;
         try {
-            con = connection;
             int k = 1;
-            ps = con.prepareCall(SQL_REGISTRATION_VALIDATION);
+            ps = connection.prepareCall(SQL_REGISTRATION_VALIDATION);
             ps.setString(k++, operator.getLogin());
             ps.setString(k, operator.getEmail());
             rs = ps.executeQuery();
@@ -99,10 +91,8 @@ public class MyOperatorDAO implements OperatorDAO {
             }else {
                 while (rs.next()){
                     operator=extractPrepareOperator(rs);
-                    System.out.println(operator);
                 }
             }
-            con.commit();
         } catch (SQLException e) {
             e.printStackTrace();
         }

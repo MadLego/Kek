@@ -27,7 +27,6 @@ public class Controller extends HttpServlet {
         process(req,resp);
     }
     private void process(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.setCharacterEncoding("UTF-8");
         LOG.debug("Controller starts");
 
         // extract command name from the request
@@ -48,7 +47,6 @@ public class Controller extends HttpServlet {
         LOG.trace("Forward address --> " + forward);
 
         LOG.debug("Controller finished, now go to forward address --> " + forward);
-
         // go to forward
         req.getRequestDispatcher(forward).forward(req, resp);
 

@@ -95,7 +95,7 @@
                             <option value="No">Reject</option>
                         </select>
                     </td>
-                    <td><input type="submit" value="Submit"></td>
+                    <td><input type="submit" value="<fmt:message key="flight.label.submit" bundle="${lang}"/>"></td>
                 </form>
             </tr><!-- Table Row -->
             </c:forEach>

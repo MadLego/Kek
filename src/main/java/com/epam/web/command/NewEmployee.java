@@ -24,7 +24,7 @@ public class NewEmployee extends Command {
     public String execute(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         LOG.debug("Command starts");
 
-        Connection connection = TransactionManager.prepareConection(DBManager.getInstance().getConnection());
+        Connection connection = TransactionManager.prepareConnection(DBManager.getInstance().getConnection());
 
         CrewMan man = newEmployee(request);
         LOG.trace("New Employee --> "+man);
@@ -53,10 +53,12 @@ public class NewEmployee extends Command {
             list.add("Name cannot be empty");
         }
         Pattern namePattern = Pattern.compile("[A-ZА-Я]{1}[a-zа-я]+");
+        LOG.trace("Name"+man.getFirstName());
         Matcher m = namePattern.matcher(man.getFirstName());
         if (!m.find()){
             list.add("Name must be\"John, Bob, Susan\"");
         }
+        LOG.trace("Last Name"+man.getLastName());
         m=namePattern.matcher(man.getLastName());
         if (!m.find()){
             list.add("SurName must be\"Smith, Snow, Barateon\"");

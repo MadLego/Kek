@@ -85,7 +85,7 @@
                     <td><c:out value="${item.departure_time}"/></td>
                     <td><c:out value="${item.landing_airport}"/></td>
                     <td><c:out value="${item.landing_time}"/></td>
-                    <td><input type="submit" value="Delete"></td>
+                    <td><input type="submit" value="<fmt:message key="label.view.delete" bundle="${lang}"/>"></td>
                 </tr><!-- Table Row -->
                 </form>
             </c:forEach>

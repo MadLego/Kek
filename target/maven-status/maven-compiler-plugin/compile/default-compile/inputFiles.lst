@@ -20,12 +20,12 @@ C:\EPAM\Last\src\main\java\com\epam\entity\Plane.java
 C:\EPAM\Last\src\main\java\com\epam\dto\CrewDTO.java
 C:\EPAM\Last\src\main\java\com\epam\dao\EmployeeDAO.java
 C:\EPAM\Last\src\main\java\com\epam\web\command\SortFlights.java
-C:\EPAM\Last\src\main\java\com\epam\captcha\MyCaptcha.java
 C:\EPAM\Last\src\main\java\com\epam\entity\CrewManAdmission.java
 C:\EPAM\Last\src\main\java\com\epam\dto\ChangeEmployeeParser.java
 C:\EPAM\Last\src\main\java\com\epam\db\Fields.java
 C:\EPAM\Last\src\main\java\com\epam\dto\ChangeFlightPaser.java
 C:\EPAM\Last\src\main\java\com\epam\web\command\PrepareDeleteFlight.java
+C:\EPAM\Last\src\main\java\com\epam\web\MyCaptcha.java
 C:\EPAM\Last\src\main\java\com\epam\web\command\NewFlight.java
 C:\EPAM\Last\src\main\java\com\epam\dto\DateTimeParser.java
 C:\EPAM\Last\src\main\java\com\epam\dao\FlightDAO.java

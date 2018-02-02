@@ -22,7 +22,7 @@ public class AcceptCrew extends Command {
 
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-        Connection connection = TransactionManager.prepareConection(DBManager.getInstance().getConnection());
+        Connection connection = TransactionManager.prepareConnection(DBManager.getInstance().getConnection());
         LOG.debug("Command starts");
         String decision = request.getParameter("admission");
 

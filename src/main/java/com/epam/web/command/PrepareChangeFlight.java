@@ -21,7 +21,7 @@ public class PrepareChangeFlight extends Command {
         LOG.debug("Command starts");
 
 
-        Connection connection = TransactionManager.prepareConection(DBManager.getInstance().getConnection());
+        Connection connection = TransactionManager.prepareConnection(DBManager.getInstance().getConnection());
 
         List<Flight> flightList = new MyFlightDAO().showAllFlights(connection);
         LOG.trace("Flight list --> "+flightList);

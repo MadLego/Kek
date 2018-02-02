@@ -74,7 +74,7 @@
             <p>EEEE BOY</p>
             <form action="Controller" method="post" class="search">
                 <input type="hidden" name="command" value="searchFlight"/>
-                <input type="search" name="searchItem" placeholder="Search" class="input" />
+                <input type="search" name="searchItem" placeholder="<fmt:message key="label.view.search" bundle="${lang}"/>" class="input" />
                 <input type="submit" name="" value="" class="submit" />
             </form>
         </div>

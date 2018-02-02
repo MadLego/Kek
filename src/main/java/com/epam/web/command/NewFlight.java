@@ -13,6 +13,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.Connection;
+import java.sql.SQLException;
 import java.util.ArrayList;
 
 public class NewFlight extends Command {
@@ -22,9 +23,14 @@ public class NewFlight extends Command {
     public String execute(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         LOG.debug("Command starts");
 
-        Connection connection = TransactionManager.prepareConection(DBManager.getInstance().getConnection());
+        Connection connection = TransactionManager.prepareConnection(DBManager.getInstance().getConnection());
 
-        Flight f = newFlight(request);
+        Flight f = null;
+        try {
+            f = newFlight(request);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
         LOG.trace("New Flight --> "+f);
 
         ArrayList<String> list = validateNewFlight(f);
@@ -38,10 +44,10 @@ public class NewFlight extends Command {
 
         TransactionManager.close(connection);
         LOG.debug("Command finished");
-        return Path.FLIGHTS_LIST;
+        return Path.FLIGHT_RETURN_LIST;
     }
 
-    Flight newFlight(HttpServletRequest req) {
+    Flight newFlight(HttpServletRequest req) throws SQLException {
         MyFlightDAO flightDAO = new MyFlightDAO();
         return flightDAO.fillFlight(DBManager.getInstance().getConnection(), FlightParser.flightDTOparser(req));
     }

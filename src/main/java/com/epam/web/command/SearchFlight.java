@@ -22,7 +22,7 @@ public class SearchFlight extends Command {
     public String execute(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         LOG.debug("Command starts");
 
-        Connection connection = TransactionManager.prepareConection(DBManager.getInstance().getConnection());
+        Connection connection = TransactionManager.prepareConnection(DBManager.getInstance().getConnection());
 
         ArrayList<Flight> flights = new MyFlightDAO().searchFlight(connection,request.getParameter("searchItem"));
         LOG.trace("List of flights --> "+flights);

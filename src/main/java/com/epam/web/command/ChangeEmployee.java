@@ -22,7 +22,7 @@ public class ChangeEmployee extends Command {
     public String execute(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         LOG.debug("Command starts");
 
-        Connection connection = TransactionManager.prepareConection(DBManager.getInstance().getConnection());
+        Connection connection = TransactionManager.prepareConnection(DBManager.getInstance().getConnection());
 
         CrewMan man = changeEmployee(request);
         ArrayList<String> list=new NewEmployee().validateEmployee(man);
@@ -39,7 +39,7 @@ public class ChangeEmployee extends Command {
         return Path.EMPLOYEE_RETURN_CHANGE_LIST;
     }
     CrewMan changeEmployee(HttpServletRequest req){
-        Connection connection = TransactionManager.prepareConection(DBManager.getInstance().getConnection());
+        Connection connection = TransactionManager.prepareConnection(DBManager.getInstance().getConnection());
         MyEmployeeDAO employeeDAO = new MyEmployeeDAO();
         return employeeDAO.fillCrewMan( connection, EmployeeParser.flightDTOParser(req));
     }

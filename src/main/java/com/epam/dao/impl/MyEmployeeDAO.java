@@ -24,15 +24,12 @@ public class MyEmployeeDAO implements EmployeeDAO {
         List<CrewMan> employeeList = new ArrayList<>();
         Statement st;
         ResultSet rs;
-        Connection con;
         try {
-            con = connection;
-            st = con.createStatement();
+            st = connection.createStatement();
             rs = st.executeQuery(SQL_SHOW_ALL_EMPLOYEES);
             while (rs.next()) {
                 employeeList.add(extractAllEmployees(rs));
             }
-            con.commit();
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -43,16 +40,13 @@ public class MyEmployeeDAO implements EmployeeDAO {
         CrewMan crewMan=new CrewMan();
         PreparedStatement ps;
         ResultSet rs;
-        Connection con;
         try {
-            con = connection;
-            ps = con.prepareCall(SQL_SELECT_EMPLOYEE_BY_ID);
+            ps = connection.prepareCall(SQL_SELECT_EMPLOYEE_BY_ID);
             ps.setInt(1, employeeId);
             rs = ps.executeQuery();
             while (rs.next()) {
                crewMan=(extractAllEmployees(rs));
             }
-            con.commit();
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -63,19 +57,15 @@ public class MyEmployeeDAO implements EmployeeDAO {
         List<String> roleList = new ArrayList<>();
         Statement st;
         ResultSet rs;
-        Connection con;
         try {
-            con = connection;
-            st = con.createStatement();
+            st = connection.createStatement();
             rs = st.executeQuery(SQL_SHOW_ALL_ROLE);
             while (rs.next()) {
                 roleList.add(rs.getString("role"));
             }
-            con.commit();
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        System.out.println(roleList);
         return roleList;
     }
 
@@ -91,7 +81,6 @@ public class MyEmployeeDAO implements EmployeeDAO {
             ps.setInt(k++, crewMan.getIsPermitted());
             ps.setString(k, crewMan.getRole());
             ps.execute();
-            connection.commit();
         } catch (SQLException e1) {
             e1.printStackTrace();
         }
@@ -103,7 +92,6 @@ public class MyEmployeeDAO implements EmployeeDAO {
             PreparedStatement ps = connection.prepareCall(SQL_DELETE_EMPOYEE);
             ps.setInt(1, id);
             ps.executeUpdate();
-            connection.commit();
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -121,7 +109,6 @@ public class MyEmployeeDAO implements EmployeeDAO {
             ps.setString(k++, crewMan.getRole());
             ps.setInt(k, crewMan.getId());
             ps.executeUpdate();
-            connection.commit();
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -141,7 +128,6 @@ public class MyEmployeeDAO implements EmployeeDAO {
 //            ps.setString(1,time[0]);
 //            ps.setString(2,time[1]);
             ps.executeUpdate();
-            connection.commit();
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -159,7 +145,7 @@ public class MyEmployeeDAO implements EmployeeDAO {
         return crew;
     }
 
-    CrewMan extractAllEmployees(ResultSet rs) throws SQLException {
+    private CrewMan extractAllEmployees(ResultSet rs) throws SQLException {
         CrewMan cMan = new CrewMan();
         cMan.setId(rs.getInt("id"));
         cMan.setFirstName(rs.getNString("first_name"));
@@ -168,7 +154,6 @@ public class MyEmployeeDAO implements EmployeeDAO {
         cMan.setIsPermitted(rs.getInt("is_permitted"));
         cMan.setIsPermittedView(EmployeeParser.setAdmission(cMan.getIsPermitted()));
         cMan.setRole(rs.getString("role"));
-        System.out.println(cMan);
         return cMan;
     }
 

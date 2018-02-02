@@ -117,7 +117,7 @@
                         </c:forEach>
                         </select></td>
                     <td>
-                        <input type="submit" name="command" value="newCrew"/>
+                        <input type="submit" name="command" value="<fmt:message key="label.view.new" bundle="${lang}"/>"/>
                     </td>
             </form>
             </tr><!-- Table Row -->

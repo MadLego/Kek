@@ -18,7 +18,7 @@ public class DeleteEmployee extends Command {
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         LOG.debug("Command starts");
-        Connection connection = TransactionManager.prepareConection(DBManager.getInstance().getConnection());
+        Connection connection = TransactionManager.prepareConnection(DBManager.getInstance().getConnection());
 
         new MyEmployeeDAO().deleteEmployee(DBManager.getInstance().getConnection(), itemForDelete(request));
 

@@ -18,10 +18,10 @@ public class DeleteFlight extends Command {
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         LOG.debug("Command starts");
-        Connection connection = TransactionManager.prepareConection(DBManager.getInstance().getConnection());
+        Connection connection = TransactionManager.prepareConnection(DBManager.getInstance().getConnection());
 
         LOG.trace("Item for delete -->"+itemForDelete(request));
-        new MyFlightDAO().deleteFlight(DBManager.getInstance().getConnection(), itemForDelete(request));
+        new MyFlightDAO().deleteFlight(connection, itemForDelete(request));
 
         TransactionManager.close(connection);
         LOG.debug("Command finished");

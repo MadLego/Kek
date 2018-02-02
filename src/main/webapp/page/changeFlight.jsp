@@ -85,7 +85,7 @@
                                maxlength="6"
                                name="name"
                                value="${item.name}"
-                               placeholder="<fmt:message key="label.hint.enterFlightNumber" bundle="lang"/>"/>
+                               placeholder="<fmt:message key="label.hint.enterFlightNumber" bundle="${lang}"/>"/>
                         <span class="validity"></span></td>
                     <td><select autofocus="" name="plane" required>
                         <c:set var="plane" value="${item.plane}"/>
@@ -122,7 +122,7 @@
                     </td>
                     <td><input type="datetime-local" name="landing_time" value="${item.landing_time_out}" required/></td>
                     <td>
-                        <input type="submit" value="Submit"/>
+                        <input type="submit" value="<fmt:message key="flight.label.submit" bundle="${lang}"/>"/>
                     </td>
                     </c:forEach>
                 </tr><!-- Table Row -->

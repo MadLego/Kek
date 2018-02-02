@@ -16,6 +16,7 @@ com\epam\web\command\PrepareNewFlights.class
 com\epam\web\command\SortFlights.class
 com\epam\dao\impl\MyOperatorDAO.class
 com\epam\dto\ChangeFlightPaser.class
+com\epam\web\MyCaptcha.class
 com\epam\entity\Operator.class
 com\epam\dto\FlightDTO.class
 com\epam\web\command\NewEmployee.class
@@ -24,7 +25,6 @@ com\epam\dto\EmployeeParser.class
 com\epam\entity\Plane.class
 com\epam\entity\Airport.class
 com\epam\web\command\ChangeFlight.class
-com\epam\captcha\MyCaptcha.class
 com\epam\dto\EmployeeDTO.class
 com\epam\dao\impl\MyEmployeeDAO.class
 com\epam\entity\OperatorType.class

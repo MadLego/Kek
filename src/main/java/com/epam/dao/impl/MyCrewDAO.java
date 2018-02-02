@@ -30,7 +30,6 @@ public class MyCrewDAO implements CrewDAO {
             ps.setInt(k++, crew.getFirst_conductor());
             ps.setInt(k, crew.getSecond_conductor());
             ps.executeUpdate();
-            connection.commit();
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -41,15 +40,13 @@ public class MyCrewDAO implements CrewDAO {
         List<Crew> crewList = new ArrayList<>();
         Statement st;
         ResultSet rs;
-        Connection con;
         try {
-            con = connection;
-            st = con.createStatement();
+            st = connection.createStatement();
             rs = st.executeQuery(SQL_SHOW_ALL_CREW);
             while (rs.next()) {
                 crewList.add(extractAllCrews(rs));
             }
-            con.commit();
+
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -66,7 +63,6 @@ public class MyCrewDAO implements CrewDAO {
                 ps.setInt(k++, i);
                 ps.setTimestamp(k, timestamps[1]);
                 ps.executeUpdate();
-                connection.commit();
             } catch (SQLException e) {
                 e.printStackTrace();
             }
@@ -83,7 +79,6 @@ public class MyCrewDAO implements CrewDAO {
             }
             ps.setInt(1, flightId);
             ps.executeUpdate();
-            connection.commit();
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -94,17 +89,15 @@ public class MyCrewDAO implements CrewDAO {
         Timestamp[] admissionTime = new Timestamp[2];
         PreparedStatement ps;
         ResultSet rs;
-        Connection con = null;
         try {
-            con = connection;
-            ps = con.prepareCall(SQL_SHOW_TIME_ADMISSION_CREW);
+            ps = connection.prepareCall(SQL_SHOW_TIME_ADMISSION_CREW);
             ps.setInt(1, crewMainId);
             rs = ps.executeQuery();
             while (rs.next()) {
                 admissionTime[0] = rs.getTimestamp(1);
                 admissionTime[1] = rs.getTimestamp(2);
             }
-            con.commit();
+
             return validateTime(admissionTime, timeFlight(connection, flightId));
         } catch (SQLException e) {
             e.printStackTrace();
@@ -128,17 +121,15 @@ public class MyCrewDAO implements CrewDAO {
         Timestamp[] time = new Timestamp[2];
         PreparedStatement ps;
         ResultSet rs;
-        Connection con = null;
         try {
-            con = connection;
-            ps = con.prepareCall(SQL_GET_TIME_FLIGHT);
+            ps = connection.prepareCall(SQL_GET_TIME_FLIGHT);
             ps.setInt(1, flightId);
             rs = ps.executeQuery();
             while (rs.next()) {
                 time[0] = rs.getTimestamp(1);
                 time[1] = rs.getTimestamp(2);
             }
-            con.commit();
+
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -154,11 +145,10 @@ public class MyCrewDAO implements CrewDAO {
         crew.setRadio_operator(crewDTO.getRadio_operator());
         crew.setFirst_conductor(crewDTO.getFirst_conductor());
         crew.setSecond_conductor(crewDTO.getSecond_conductor());
-        System.out.println(crew);
         return crew;
     }
 
-    Crew extractAllCrews(ResultSet rs) throws SQLException {
+    private Crew extractAllCrews(ResultSet rs) throws SQLException {
         Crew crew = new Crew();
         crew.setId(rs.getInt("id"));
         crew.setFlight_id(rs.getInt("flight_id"));
@@ -167,7 +157,6 @@ public class MyCrewDAO implements CrewDAO {
         crew.setRadio_operator(rs.getInt("radio_opeartor"));
         crew.setFirst_conductor(rs.getInt("first_conductor"));
         crew.setSecond_conductor(rs.getInt("second_conductor"));
-        System.out.println(crew);
         return crew;
     }
 

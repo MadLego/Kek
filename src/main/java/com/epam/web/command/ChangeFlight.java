@@ -21,7 +21,7 @@ public class ChangeFlight extends Command {
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         LOG.debug("Command starts");
-        Connection connection = TransactionManager.prepareConection(DBManager.getInstance().getConnection());
+        Connection connection = TransactionManager.prepareConnection(DBManager.getInstance().getConnection());
 
         Flight f = changeFlight(request);
         ArrayList<String> list = validateChangeFlight(f);
@@ -36,7 +36,7 @@ public class ChangeFlight extends Command {
         LOG.debug("Command finished");
 
         TransactionManager.close(connection);
-        return Path.EMPLOYEE_LIST_FOR_CHANGE;
+        return Path.FLIGHT_RETURN_LIST_FOR_CHANGE;
     }
     Flight changeFlight(HttpServletRequest req){
         MyFlightDAO flightDAO = new MyFlightDAO();

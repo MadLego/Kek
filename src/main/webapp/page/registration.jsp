@@ -73,7 +73,8 @@
             <p><span class="fontawesome-mail"></span><input type="email" name="email" value="user@gmail.com" onBlur="if(this.value == '') this.value = 'user@gmail.com'" onFocus="if(this.value == 'user@gmail.com') this.value = ''" required></p> <!-- JS because of IE support; better: placeholder="Username" -->
             <p><span class="fontawesome-user"></span><input type="text" name="login" value="Username" onBlur="if(this.value == '') this.value = 'Username'" onFocus="if(this.value == 'Username') this.value = ''" required></p> <!-- JS because of IE support; better: placeholder="Username" -->
             <p><span class="fontawesome-lock"></span><input type="password" name="password"  value="Password" onBlur="if(this.value == '') this.value = 'Password'" onFocus="if(this.value == 'Password') this.value = ''" required></p> <!-- JS because of IE support; better: placeholder="Password" -->
-            <p><input type="submit" name="command" value="registration"></p>
+            <img id="captcha" src="<c:url value="simpleCaptcha.jpg" />" width="150"/> <input type="text" name="captcha" placeholder="Enter captcha">
+            <p><input type="submit" name="command" value="<fmt:message key="label.view.register" bundle="${lang}"/>"></p>
         </fieldset>
     </form>
     <p style="color: red"><c:out value="${validate}"/></p>

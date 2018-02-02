@@ -2,6 +2,7 @@ package com.epam.dao.impl;
 
 import com.epam.dao.FlightDAO;
 import com.epam.db.Fields;
+import com.epam.db.TransactionManager;
 import com.epam.dto.FlightDTO;
 import com.epam.entity.Airport;
 import com.epam.entity.Flight;
@@ -33,15 +34,12 @@ public class MyFlightDAO implements FlightDAO {
         List<Flight> flightList = new ArrayList<>();
         Statement st;
         ResultSet rs;
-        Connection con;
         try {
-            con = connection;
-            st = con.createStatement();
+            st = connection.createStatement();
             rs = st.executeQuery(SQL_SHOW_ALL_FLIGHTS);
             while (rs.next()) {
                 flightList.add(extractALlFlightList(rs));
             }
-            con.commit();
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -53,15 +51,12 @@ public class MyFlightDAO implements FlightDAO {
         List<Flight> flightList = new ArrayList<>();
         Statement st;
         ResultSet rs;
-        Connection con=null;
         try {
-            con = connection;
-            st = con.createStatement();
+            st = connection.createStatement();
             rs = st.executeQuery(SQL_FLIGHTS_FOR_CREATE);
             while (rs.next()) {
                 flightList.add(extractPrepareFlightList(rs));
             }
-            con.commit();
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -73,7 +68,6 @@ public class MyFlightDAO implements FlightDAO {
             PreparedStatement ps = connection.prepareCall(SQL_DELETE_FLIGHT);
             ps.setString(1,string);
             ps.executeUpdate();
-            connection.commit();
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -84,15 +78,12 @@ public class MyFlightDAO implements FlightDAO {
         List<Flight> flightList = new ArrayList<>();
         Statement st;
         ResultSet rs;
-        Connection con;
         try {
-            con = connection;
-            st = con.createStatement();
+            st = connection.createStatement();
             rs = st.executeQuery(SQL_SORT_BY_DEPARTURE_NUMBER);
             while (rs.next()) {
                 flightList.add(extractALlFlightList(rs));
             }
-            con.commit();
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -104,12 +95,10 @@ public class MyFlightDAO implements FlightDAO {
         List<Flight> flightList = new ArrayList<>();
         PreparedStatement ps;
         ResultSet rs;
-        Connection con;
         String SQL_SORT = "SELECT f.number, p.boarding_number AS model_id, a.name AS departure_airport, f.departure_time, b.name\nAS landing_airport, f.landing_time\nFROM flight f INNER JOIN plane p\n    ON f.plane_id = p.id\n  INNER JOIN airport a\n    ON f.departure_airport_id = a.id\n  INNER JOIN airport b\n    ON f.landing_airport_id = b.id\n";
         String q = SQL_SORT + query;
         try {
-            con = connection;
-            ps = con.prepareCall(q);
+            ps = connection.prepareCall(q);
             int k=1;
             if (search.getFrom()!=null) {
                 ps.setString(k++, search.getFrom());
@@ -124,7 +113,6 @@ public class MyFlightDAO implements FlightDAO {
             while (rs.next()) {
                 flightList.add(extractALlFlightList(rs));
             }
-            con.commit();
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -136,18 +124,15 @@ public class MyFlightDAO implements FlightDAO {
         ArrayList<Flight> list = new ArrayList<>();
         PreparedStatement ps;
         ResultSet rs;
-        Connection con;
         try {
-            con = connection;
             int k=1;
-            ps = con.prepareCall(SQL_SEARCH_FLIGHT);
+            ps = connection.prepareCall(SQL_SEARCH_FLIGHT);
             search = "%"+search+"%";
             ps.setString(k,search);
             rs = ps.executeQuery();
             while (rs.next()) {
                 list.add(extractALlFlightList(rs));
             }
-            con.commit();
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -158,21 +143,18 @@ public class MyFlightDAO implements FlightDAO {
         ArrayList<Flight> list = new ArrayList<>();
         PreparedStatement ps;
         ResultSet rs;
-        Connection con;
         try {
-            con = connection;
             int k=1;
             if (decision.equals("From")) {
-                ps = con.prepareCall(SQL_SEARCH_FLIGHT_FROM);
+                ps = connection.prepareCall(SQL_SEARCH_FLIGHT_FROM);
             }else {
-                ps = con.prepareCall(SQL_SEARCH_FLIGHT_TO);
+                ps = connection.prepareCall(SQL_SEARCH_FLIGHT_TO);
             }
             ps.setString(k,search);
             rs = ps.executeQuery();
             while (rs.next()) {
                 list.add(extractALlFlightList(rs));
             }
-            con.commit();
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -183,17 +165,14 @@ public class MyFlightDAO implements FlightDAO {
         String result="";
         PreparedStatement ps;
         ResultSet rs;
-        Connection con;
         try {
-            con = connection;
             int k=1;
-            ps = con.prepareCall(SQL_SEARCH_FLIGHT_NUMBER_BY_ID);
+            ps = connection.prepareCall(SQL_SEARCH_FLIGHT_NUMBER_BY_ID);
             ps.setInt(k,id);
             rs = ps.executeQuery();
             while (rs.next()) {
                 result = (rs.getString(1));
             }
-            con.commit();
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -204,17 +183,14 @@ public class MyFlightDAO implements FlightDAO {
         int result=0;
         PreparedStatement ps;
         ResultSet rs;
-        Connection con;
         try {
-            con = connection;
             int k=1;
-            ps = con.prepareCall(SQL_SEARCH_FLIGHT_ID_BY_NUMBER);
+            ps = connection.prepareCall(SQL_SEARCH_FLIGHT_ID_BY_NUMBER);
             ps.setString(k,number);
             rs = ps.executeQuery();
             while (rs.next()) {
                 result = (rs.getInt(1));
             }
-            con.commit();
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -225,18 +201,15 @@ public class MyFlightDAO implements FlightDAO {
         Timestamp [] timestamp = new Timestamp[2];
         PreparedStatement ps;
         ResultSet rs;
-        Connection con;
         try {
-            con = connection;
             int k=1;
-            ps = con.prepareCall(SQL_SEARCH_FLIGHT_TIME_BY_NUMBER);
+            ps = connection.prepareCall(SQL_SEARCH_FLIGHT_TIME_BY_NUMBER);
             ps.setString(k,number);
             rs = ps.executeQuery();
             while (rs.next()) {
                 timestamp[0] = (rs.getTimestamp(1));
                 timestamp[1] = (rs.getTimestamp(2));
             }
-            con.commit();
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -275,7 +248,8 @@ public class MyFlightDAO implements FlightDAO {
         return id;
     }
 
-    public Flight fillFlight(Connection con, FlightDTO dto){
+    public Flight fillFlight(Connection con, FlightDTO dto) {
+        TransactionManager.prepareConnection(con);
         Flight flight = new Flight();
         flight.setNumber(dto.getName());
         flight.setPlanedID(getIdFromPlane(con,dto.getPlane()));
@@ -283,15 +257,14 @@ public class MyFlightDAO implements FlightDAO {
         flight.setLanding_airport_id(getIdFromAirport(con,dto.getLanding_airport()));
         flight.setDeparture_time(dto.getDeparture_time());
         flight.setLanding_time(dto.getLanding_time());
+        TransactionManager.close(con);
         return flight;
     }
 
     public void changeFlight(Connection connection, Flight flight, String before){
         try {
-            System.out.println(flight);
             PreparedStatement ps = connection.prepareCall(SQL_CHANGE_FLIGHT);
             int k=1;
-            System.out.println(before);
             ps.setString(k++, flight.getNumber());
             ps.setInt(k++, flight.getPlanedID());
             ps.setInt(k++, flight.getDeparture_airport_id());
@@ -300,7 +273,6 @@ public class MyFlightDAO implements FlightDAO {
             ps.setTimestamp(k++, flight.getLanding_time());
             ps.setString(k,before);
             ps.executeUpdate();
-            connection.commit();
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -319,7 +291,6 @@ public class MyFlightDAO implements FlightDAO {
                 ps.setInt(k++, flight.getLanding_airport_id());
                 ps.setTimestamp(k, flight.getLanding_time());
                 ps.execute();
-                connection.commit();
             } catch (SQLException e) {
                 e.printStackTrace();
             }
@@ -330,15 +301,12 @@ public class MyFlightDAO implements FlightDAO {
         List<Airport> airportList= new ArrayList<>();
         Statement st;
         ResultSet rs;
-        Connection con=null;
         try {
-            con = connection;
-            st = con.createStatement();
+            st = connection.createStatement();
             rs = st.executeQuery(SQL_SHOW_ALL_AIRPORTS);
             while (rs.next()) {
                 airportList.add(extractAllAirport(rs));
             }
-            con.commit();
         } catch (SQLException e) {
             e.printStackTrace();
         }

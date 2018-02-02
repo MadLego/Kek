@@ -83,7 +83,7 @@
                 <td><c:out value="${item.lastName}"/></td>
                 <td><c:out value="${item.age}"/></td>
                 <td><c:out value="${item.role}"/></td>
-                <td><input type="submit" name="Delete"/></td>
+                <td><input type="submit" name="Delete" value="<fmt:message key="label.view.delete" bundle="${lang}"/>"/></td>
             </tr><!-- Table Row -->
             </form>
         </c:forEach>

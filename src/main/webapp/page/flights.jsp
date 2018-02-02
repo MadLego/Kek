@@ -38,7 +38,7 @@
     }
 </script>
 <fmt:setLocale value="${currentLocale}" scope="session"/>
-<fmt:setBundle basename="FlightBundle" var="lang" />
+<fmt:setBundle basename="FlightBundle" var="lang" scope="page" />
 <head>
     <meta charset="UTF-8">
     <title><fmt:message key="page.label.flights" bundle="${lang}"/></title>
@@ -82,20 +82,20 @@
                         <c:when test="${sortFlight eq 'Sort By Number'}">
                         </c:when>
                         <c:otherwise>
-                            <option>S<fmt:message key="flight.label.sortByNumber" bundle="lang"/></option>
+                            <option><fmt:message key="flight.label.sortByNumber" bundle="${lang}"/></option>
                         </c:otherwise>
                         </c:choose>
                         <c:choose>
                             <c:when test="${sortFlight eq 'Sort By Name'}">
                             </c:when>
                             <c:otherwise>
-                                <option><fmt:message key="flight.label.sortByName" bundle="lang"/></option>
+                                <option><fmt:message key="flight.label.sortByName" bundle="${lang}"/></option>
                             </c:otherwise>
                         </c:choose>
                     </c:when>
                     <c:otherwise>
-                        <option><fmt:message key="flight.label.sortByNumber" bundle="lang"/> </option>
-                        <option><fmt:message key="flight.label.sortByName" bundle="lang"/></option>
+    <!--This place!!!--><option><fmt:message key="flight.label.sortByNumber" bundle="${lang}"/></option>
+                        <option><fmt:message key="flight.label.sortByName" bundle="${lang}"/></option>
                     </c:otherwise>
                     </c:choose>
                 </select>
@@ -135,7 +135,7 @@
                     <input type="date" name="date">
                 </c:otherwise>
                 </c:choose>
-                <input type="submit" value="Sort" name="Submit">
+                <input type="submit" value="<fmt:message key="label.view.sort" bundle="${lang}"/>" name="Submit">
             </form>
         </div>
     </div>

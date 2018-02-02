@@ -15,7 +15,10 @@ public class DBManager {
     private static DBManager instance;
     private DataSource ds;
 
-    private  DBManager() {
+    /**
+     * Use the Singleton pattern
+     */
+    private DBManager() {
         DataSource ds = null;
         InitialContext initContext;
         try {
@@ -25,6 +28,10 @@ public class DBManager {
         this.ds=ds;
     }
 
+    /**
+     * Synchronize access to DBManger
+     * @return instance of DBManger object
+     */
     public static synchronized DBManager getInstance() {
         if (instance == null) {
             instance = new DBManager();
@@ -32,6 +39,10 @@ public class DBManager {
         return instance;
     }
 
+    /**
+     * Get connection
+     * @return connection
+     */
     public Connection getConnection() {
         Connection con = null;
         try {
