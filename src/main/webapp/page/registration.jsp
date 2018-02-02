@@ -5,40 +5,7 @@
   Time: 16:47
   To change this template use File | Settings | File Templates.
 --%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ taglib uri="/WEB-INF/language.tld" prefix="mytag"%>
-<%@ taglib prefix="my" uri="mytaglib.tld" %>
-<script type="text/javascript">
-    function insertParam(key, value) {
-        key = encodeURIComponent(key); value = encodeURIComponent(value);
-
-        var kvp = document.location.search.substr(1).split('&');
-        if (kvp == '') {
-            document.location.search = '?' + key + '=' + value;
-        }
-        else {
-
-            var i = kvp.length; var x; while (i--) {
-                x = kvp[i].split('=');
-
-                if (x[0] == key) {
-                    x[1] = value;
-                    kvp[i] = x.join('=');
-                    break;
-                }
-            }
-
-            if (i < 0) { kvp[kvp.length] = [key, value].join('='); }
-
-            //this will reload the page, it's likely better to store this until finished
-            document.location.search = kvp.join('&');
-        }
-    }
-</script>
-<fmt:setLocale value="${currentLocale}" scope="session"/>
-<fmt:setBundle basename="FlightBundle" var="lang" />
+<%@ include file="/page/header.jspf"%>
 <html>
 <head>
     <meta charset="UTF-8">
@@ -69,6 +36,7 @@
 </div>
 <div id="login">
     <form action="Controller" method="post">
+        <input type="hidden" name="command" value="registration">
         <fieldset class="clearfix">
             <p><span class="fontawesome-mail"></span><input type="email" name="email" value="user@gmail.com" onBlur="if(this.value == '') this.value = 'user@gmail.com'" onFocus="if(this.value == 'user@gmail.com') this.value = ''" required></p> <!-- JS because of IE support; better: placeholder="Username" -->
             <p><span class="fontawesome-user"></span><input type="text" name="login" value="Username" onBlur="if(this.value == '') this.value = 'Username'" onFocus="if(this.value == 'Username') this.value = ''" required></p> <!-- JS because of IE support; better: placeholder="Username" -->

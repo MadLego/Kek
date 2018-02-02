@@ -39,7 +39,7 @@ public class MyOperatorDAO implements OperatorDAO {
         operator.setEmail(rs.getString(Fields.OPERATOR_EMAIL));
         operator.setLogin(rs.getString(Fields.OPERATOR_LOGIN));
         operator.setPassword(rs.getString(Fields.OPERATOR_PASSWORD));
-        operator.setOp_type_id(rs.getInt(Fields.OPERATOR_OPERATOR_TYPE_ID));
+        operator.setOpTypeId(rs.getInt(Fields.OPERATOR_OPERATOR_TYPE_ID));
         return operator;
     }
 
@@ -49,7 +49,7 @@ public class MyOperatorDAO implements OperatorDAO {
         operator.setEmail(dto.getEmail());
         operator.setLogin(dto.getLogin());
         operator.setPassword(dto.getPassword());
-        operator.setOp_type_id(dto.getOp_type_id());
+        operator.setOpTypeId(dto.getOp_type_id());
         return operator;
     }
 

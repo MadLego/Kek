@@ -1,28 +1,56 @@
-2018-02-02 20:03 [DEBUG]           ContextListener:    39 - Log4j has been initialized
-2018-02-02 20:03 [DEBUG]          CommandContainer:    41 - Command container was successfully initialized
-2018-02-02 20:03 [TRACE]          CommandContainer:    42 - Number of commands --> 26
-2018-02-02 20:03 [DEBUG]                LangFilter:    17 - Filter starts
-2018-02-02 20:03 [TRACE]                LangFilter:    27 - Chosen language is null
-2018-02-02 20:03 [TRACE]                LangFilter:    29 - Attribute currentLocale: null
-2018-02-02 20:03 [TRACE]                LangFilter:    27 - Chosen language is null
-2018-02-02 20:03 [TRACE]                LangFilter:    29 - Attribute currentLocale: en
-2018-02-02 20:03 [DEBUG]                Controller:    31 - Controller starts
-2018-02-02 20:03 [TRACE]                Controller:    35 - Request parameter: command --> prepareEmployee
-2018-02-02 20:03 [TRACE]                Controller:    39 - Obtained command --> PrepareNewEmployee
-2018-02-02 20:03 [DEBUG]        PrepareNewEmployee:    16 - Command starts
-2018-02-02 20:03 [TRACE]        PrepareNewEmployee:    17 - This class returns to page for creating new Employee
-2018-02-02 20:03 [DEBUG]        PrepareNewEmployee:    18 - Command finished
-2018-02-02 20:03 [TRACE]                Controller:    48 - Forward address --> /newEmployee
-2018-02-02 20:03 [DEBUG]                Controller:    50 - Controller finished, now go to forward address --> /newEmployee
-2018-02-02 20:03 [TRACE]                LangFilter:    27 - Chosen language is null
-2018-02-02 20:03 [TRACE]                LangFilter:    29 - Attribute currentLocale: en
-2018-02-02 20:03 [DEBUG]                Controller:    31 - Controller starts
-2018-02-02 20:03 [TRACE]                Controller:    35 - Request parameter: command --> newEmployee
-2018-02-02 20:03 [TRACE]                Controller:    39 - Obtained command --> NewEmployee
-2018-02-02 20:03 [DEBUG]               NewEmployee:    25 - Command starts
-2018-02-02 20:03 [TRACE]               NewEmployee:    30 - New Employee --> CrewMan{id=0, firstName='Влад', lastName='Гаврилюк', age=20, isPermitted=1, role='conductor'}
-2018-02-02 20:03 [TRACE]               NewEmployee:    56 - NameВлад
-2018-02-02 20:03 [TRACE]               NewEmployee:    61 - Last NameГаврилюк
-2018-02-02 20:03 [DEBUG]               NewEmployee:    41 - Command finished
-2018-02-02 20:03 [TRACE]                Controller:    48 - Forward address --> /newEmployee
-2018-02-02 20:03 [DEBUG]                Controller:    50 - Controller finished, now go to forward address --> /newEmployee
+2018-02-03 00:53 [DEBUG]           ContextListener:    39 - Log4j has been initialized
+2018-02-03 00:53 [DEBUG]          CommandContainer:    42 - Command container was successfully initialized
+2018-02-03 00:53 [TRACE]          CommandContainer:    43 - Number of commands --> 27
+2018-02-03 00:53 [DEBUG]              AccessFilter:    71 - Filter initialization starts
+2018-02-03 00:53 [TRACE]              AccessFilter:    77 - Access map --> {CLIENT=[listFlight, sampleFlight], ADMIN=[listFlight, prepareFlight, newFlight, listFlightForDelete, deleteFlight, listFlightForChange, changeThisFlight, changeFlight, prepareEmployee, newEmployee, listEmployeeForDelete, deleteEmployee, listEmployeeForChange, changeThisEmployee, changeEmployee, sortFlightByName, sortFlightByNumber, searchFlight, listCrewAccept, acceptCrew, sampleFlight], DISPATCHER=[listFlight, sortFlightByName, sortFlightByNumber, listCrew, newThisCrew, newCrew, searchFlight]}
+2018-02-03 00:53 [TRACE]              AccessFilter:    81 - Common commands --> [logout, searchFlight, sampleFlight, listFlight, registration, flights, login]
+2018-02-03 00:53 [TRACE]              AccessFilter:    85 - Out of control commands --> [logout]
+2018-02-03 00:53 [DEBUG]              AccessFilter:    87 - Filter initialization finished
+2018-02-03 00:53 [DEBUG]                LangFilter:    17 - Filter starts
+2018-02-03 00:53 [TRACE]                LangFilter:    27 - Chosen language is null
+2018-02-03 00:53 [TRACE]                LangFilter:    29 - Attribute currentLocale: null
+2018-02-03 00:53 [TRACE]                LangFilter:    27 - Chosen language is null
+2018-02-03 00:53 [TRACE]                LangFilter:    29 - Attribute currentLocale: en
+2018-02-03 00:53 [TRACE]                LangFilter:    27 - Chosen language is null
+2018-02-03 00:53 [TRACE]                LangFilter:    29 - Attribute currentLocale: en
+2018-02-03 00:53 [DEBUG]              AccessFilter:    29 - Filter starts
+2018-02-03 00:53 [DEBUG]              AccessFilter:    33 - Filter finished
+2018-02-03 00:53 [DEBUG]                Controller:    28 - Controller starts
+2018-02-03 00:53 [TRACE]                Controller:    32 - Request parameter: command --> login
+2018-02-03 00:53 [TRACE]                Controller:    36 - Obtained command --> Login
+2018-02-03 00:53 [DEBUG]                     Login:    23 - Command starts
+2018-02-03 00:53 [TRACE]                     Login:    28 - UserOperator{id=0, email='kingOfTheNorth@gmail.com', login='John', password='b46d3c8ee8032551c011745d587705cc', opTypeId=1}
+2018-02-03 00:53 [TRACE]                Controller:    45 - Forward address --> /main
+2018-02-03 00:53 [DEBUG]                Controller:    47 - Controller finished, now go to forward address --> /main
+2018-02-03 00:53 [TRACE]                LangFilter:    27 - Chosen language is null
+2018-02-03 00:53 [TRACE]                LangFilter:    29 - Attribute currentLocale: en
+2018-02-03 00:53 [TRACE]                LangFilter:    27 - Chosen language is null
+2018-02-03 00:53 [TRACE]                LangFilter:    29 - Attribute currentLocale: en
+2018-02-03 00:53 [TRACE]                LangFilter:    27 - Chosen language is null
+2018-02-03 00:53 [TRACE]                LangFilter:    29 - Attribute currentLocale: en
+2018-02-03 00:53 [DEBUG]              AccessFilter:    29 - Filter starts
+2018-02-03 00:53 [DEBUG]              AccessFilter:    33 - Filter finished
+2018-02-03 00:53 [DEBUG]                Controller:    28 - Controller starts
+2018-02-03 00:53 [TRACE]                Controller:    32 - Request parameter: command --> listFlight
+2018-02-03 00:53 [TRACE]                Controller:    36 - Obtained command --> AllFlightsList
+2018-02-03 00:53 [DEBUG]            AllFlightsList:    22 - Command starts
+2018-02-03 00:53 [TRACE]            AllFlightsList:    26 - Found in DB: flightList --> [Flight{id=141, number='PS57', planedID=0, plane='RS-L18K', departure_airport='Boryspil International Airport', departure_airport_id=0, departure_time=2018-02-15 10:45:00.0, landing_airport='Odessa International Airport', landing_airport_id=0, landing_time=2018-02-15 12:05:00.0}, Flight{id=142, number='PS231', planedID=0, plane='UR-8AT', departure_airport='Rockcliffe St', departure_airport_id=0, departure_time=2018-02-15 12:44:00.0, landing_airport='Boryspil International Airport', landing_airport_id=0, landing_time=2018-02-16 17:15:00.0}, Flight{id=143, number='UA22', planedID=0, plane='JP-17SK', departure_airport='Dublin Airport', departure_airport_id=0, departure_time=2018-02-13 17:05:00.0, landing_airport='Rockcliffe St', landing_airport_id=0, landing_time=2018-02-14 03:55:00.0}, Flight{id=144, number='FR2371', planedID=0, plane='RS-L18K', departure_airport='London Southend Airport', departure_airport_id=0, departure_time=2018-02-17 09:32:00.0, landing_airport='Dublin Airport', landing_airport_id=0, landing_time=2018-02-17 14:27:00.0}, Flight{id=145, number='AL265', planedID=0, plane='KS-89PJ', departure_airport='Galway Airport', departure_airport_id=0, departure_time=2018-02-14 11:08:00.0, landing_airport='Rockcliffe St', landing_airport_id=0, landing_time=2018-02-17 18:37:00.0}, Flight{id=146, number='PS117', planedID=0, plane='KU-9S7A', departure_airport='Kharkov Airport', departure_airport_id=0, departure_time=2018-02-13 06:08:00.0, landing_airport='Boryspil International Airport', landing_airport_id=0, landing_time=2018-02-14 07:20:00.0}, Flight{id=147, number='OP54', planedID=0, plane='LT-LA18', departure_airport='Odessa International Airport', departure_airport_id=0, departure_time=2018-02-13 22:13:00.0, landing_airport='John F Kennedy Intl', landing_airport_id=0, landing_time=2018-02-14 19:34:00.0}, Flight{id=148, number='FR178', planedID=0, plane='KS-616A', departure_airport='Dublin Airport', departure_airport_id=0, departure_time=2018-02-15 21:11:00.0, landing_airport='London Southend Airport', landing_airport_id=0, landing_time=2018-02-16 02:27:00.0}, Flight{id=154, number='BOOM', planedID=0, plane='KU-9S7A', departure_airport='London Southend Airport', departure_airport_id=0, departure_time=2018-02-01 00:00:00.0, landing_airport='Odessa International Airport', landing_airport_id=0, landing_time=2018-02-02 20:00:00.0}, Flight{id=156, number='KEK', planedID=0, plane='RS-L18K', departure_airport='Rockcliffe St', departure_airport_id=0, departure_time=2018-01-02 12:10:00.0, landing_airport='John F Kennedy Intl', landing_airport_id=0, landing_time=2018-01-03 12:10:00.0}, Flight{id=164, number='SUCK', planedID=0, plane='RS-L18K', departure_airport='Boryspil International Airport', departure_airport_id=0, departure_time=2018-02-01 00:00:00.0, landing_airport='Odessa International Airport', landing_airport_id=0, landing_time=2018-02-02 00:00:00.0}, Flight{id=167, number='KOK', planedID=0, plane='RS-L18K', departure_airport='Boryspil International Airport', departure_airport_id=0, departure_time=2018-02-01 00:00:00.0, landing_airport='Odessa International Airport', landing_airport_id=0, landing_time=2018-02-02 00:00:00.0}, Flight{id=168, number='LOOK', planedID=0, plane='RS-L18K', departure_airport='Boryspil International Airport', departure_airport_id=0, departure_time=2018-02-01 00:00:00.0, landing_airport='Odessa International Airport', landing_airport_id=0, landing_time=2018-02-02 00:00:00.0}]
+2018-02-03 00:53 [TRACE]            AllFlightsList:    29 - Found in DB: airportList --> [Airport{id=0, name='Boryspil International Airport', code='KBP', city='Kiev', latitude=50.35, longitude=30.89}, Airport{id=0, name='Rockcliffe St', code='YRO', city='Otava', latitude=45.4603, longitude=-75.6461}, Airport{id=0, name='Kharkov Airport', code='HRK', city='Kharkiv', latitude=49.9248, longitude=36.29}, Airport{id=0, name='Odessa International Airport', code='ODS', city='Odessa', latitude=46.4268, longitude=30.6765}, Airport{id=0, name='John F Kennedy Intl', code='JFK', city='New York', latitude=40.6398, longitude=-73.7789}, Airport{id=0, name='London Southend Airport', code='SEN', city='London', latitude=51.5714, longitude=0.695556}, Airport{id=0, name='Dublin Airport', code='DUB', city='Dublin', latitude=53.4214, longitude=-6.27}, Airport{id=0, name='Galway Airport', code='GWY', city='Galway', latitude=53.3002, longitude=-8.94116}]
+2018-02-03 00:53 [DEBUG]            AllFlightsList:    35 - Command finished
+2018-02-03 00:53 [TRACE]                Controller:    45 - Forward address --> /flights
+2018-02-03 00:53 [DEBUG]                Controller:    47 - Controller finished, now go to forward address --> /flights
+2018-02-03 00:54 [TRACE]                LangFilter:    27 - Chosen language is null
+2018-02-03 00:54 [TRACE]                LangFilter:    29 - Attribute currentLocale: en
+2018-02-03 00:54 [TRACE]                LangFilter:    27 - Chosen language is null
+2018-02-03 00:54 [TRACE]                LangFilter:    29 - Attribute currentLocale: en
+2018-02-03 00:54 [DEBUG]              AccessFilter:    29 - Filter starts
+2018-02-03 00:54 [DEBUG]              AccessFilter:    33 - Filter finished
+2018-02-03 00:54 [DEBUG]                Controller:    28 - Controller starts
+2018-02-03 00:54 [TRACE]                Controller:    32 - Request parameter: command --> listFlight
+2018-02-03 00:54 [TRACE]                Controller:    36 - Obtained command --> AllFlightsList
+2018-02-03 00:54 [DEBUG]            AllFlightsList:    22 - Command starts
+2018-02-03 00:54 [TRACE]            AllFlightsList:    26 - Found in DB: flightList --> [Flight{id=141, number='PS57', planedID=0, plane='RS-L18K', departure_airport='Boryspil International Airport', departure_airport_id=0, departure_time=2018-02-15 10:45:00.0, landing_airport='Odessa International Airport', landing_airport_id=0, landing_time=2018-02-15 12:05:00.0}, Flight{id=142, number='PS231', planedID=0, plane='UR-8AT', departure_airport='Rockcliffe St', departure_airport_id=0, departure_time=2018-02-15 12:44:00.0, landing_airport='Boryspil International Airport', landing_airport_id=0, landing_time=2018-02-16 17:15:00.0}, Flight{id=143, number='UA22', planedID=0, plane='JP-17SK', departure_airport='Dublin Airport', departure_airport_id=0, departure_time=2018-02-13 17:05:00.0, landing_airport='Rockcliffe St', landing_airport_id=0, landing_time=2018-02-14 03:55:00.0}, Flight{id=144, number='FR2371', planedID=0, plane='RS-L18K', departure_airport='London Southend Airport', departure_airport_id=0, departure_time=2018-02-17 09:32:00.0, landing_airport='Dublin Airport', landing_airport_id=0, landing_time=2018-02-17 14:27:00.0}, Flight{id=145, number='AL265', planedID=0, plane='KS-89PJ', departure_airport='Galway Airport', departure_airport_id=0, departure_time=2018-02-14 11:08:00.0, landing_airport='Rockcliffe St', landing_airport_id=0, landing_time=2018-02-17 18:37:00.0}, Flight{id=146, number='PS117', planedID=0, plane='KU-9S7A', departure_airport='Kharkov Airport', departure_airport_id=0, departure_time=2018-02-13 06:08:00.0, landing_airport='Boryspil International Airport', landing_airport_id=0, landing_time=2018-02-14 07:20:00.0}, Flight{id=147, number='OP54', planedID=0, plane='LT-LA18', departure_airport='Odessa International Airport', departure_airport_id=0, departure_time=2018-02-13 22:13:00.0, landing_airport='John F Kennedy Intl', landing_airport_id=0, landing_time=2018-02-14 19:34:00.0}, Flight{id=148, number='FR178', planedID=0, plane='KS-616A', departure_airport='Dublin Airport', departure_airport_id=0, departure_time=2018-02-15 21:11:00.0, landing_airport='London Southend Airport', landing_airport_id=0, landing_time=2018-02-16 02:27:00.0}, Flight{id=154, number='BOOM', planedID=0, plane='KU-9S7A', departure_airport='London Southend Airport', departure_airport_id=0, departure_time=2018-02-01 00:00:00.0, landing_airport='Odessa International Airport', landing_airport_id=0, landing_time=2018-02-02 20:00:00.0}, Flight{id=156, number='KEK', planedID=0, plane='RS-L18K', departure_airport='Rockcliffe St', departure_airport_id=0, departure_time=2018-01-02 12:10:00.0, landing_airport='John F Kennedy Intl', landing_airport_id=0, landing_time=2018-01-03 12:10:00.0}, Flight{id=164, number='SUCK', planedID=0, plane='RS-L18K', departure_airport='Boryspil International Airport', departure_airport_id=0, departure_time=2018-02-01 00:00:00.0, landing_airport='Odessa International Airport', landing_airport_id=0, landing_time=2018-02-02 00:00:00.0}, Flight{id=167, number='KOK', planedID=0, plane='RS-L18K', departure_airport='Boryspil International Airport', departure_airport_id=0, departure_time=2018-02-01 00:00:00.0, landing_airport='Odessa International Airport', landing_airport_id=0, landing_time=2018-02-02 00:00:00.0}, Flight{id=168, number='LOOK', planedID=0, plane='RS-L18K', departure_airport='Boryspil International Airport', departure_airport_id=0, departure_time=2018-02-01 00:00:00.0, landing_airport='Odessa International Airport', landing_airport_id=0, landing_time=2018-02-02 00:00:00.0}]
+2018-02-03 00:54 [TRACE]            AllFlightsList:    29 - Found in DB: airportList --> [Airport{id=0, name='Boryspil International Airport', code='KBP', city='Kiev', latitude=50.35, longitude=30.89}, Airport{id=0, name='Rockcliffe St', code='YRO', city='Otava', latitude=45.4603, longitude=-75.6461}, Airport{id=0, name='Kharkov Airport', code='HRK', city='Kharkiv', latitude=49.9248, longitude=36.29}, Airport{id=0, name='Odessa International Airport', code='ODS', city='Odessa', latitude=46.4268, longitude=30.6765}, Airport{id=0, name='John F Kennedy Intl', code='JFK', city='New York', latitude=40.6398, longitude=-73.7789}, Airport{id=0, name='London Southend Airport', code='SEN', city='London', latitude=51.5714, longitude=0.695556}, Airport{id=0, name='Dublin Airport', code='DUB', city='Dublin', latitude=53.4214, longitude=-6.27}, Airport{id=0, name='Galway Airport', code='GWY', city='Galway', latitude=53.3002, longitude=-8.94116}]
+2018-02-03 00:54 [DEBUG]            AllFlightsList:    35 - Command finished
+2018-02-03 00:54 [TRACE]                Controller:    45 - Forward address --> /flights
+2018-02-03 00:54 [DEBUG]                Controller:    47 - Controller finished, now go to forward address --> /flights

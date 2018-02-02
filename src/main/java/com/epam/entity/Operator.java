@@ -5,41 +5,14 @@ public class Operator {
     String email;
     String login;
     String password;
-    int op_type_id;
+    int opTypeId;
 
-    @Override
-    public String toString() {
-        return "Operator{" +
-                "id=" + id +
-                ", email='" + email + '\'' +
-                ", login='" + login + '\'' +
-                ", password='" + password + '\'' +
-                ", op_type_id=" + op_type_id +
-                '}';
+    public int getOpTypeId() {
+        return opTypeId;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof Operator)) return false;
-
-        Operator operator = (Operator) o;
-
-        if (id != operator.id) return false;
-        if (op_type_id != operator.op_type_id) return false;
-        if (!email.equals(operator.email)) return false;
-        if (!login.equals(operator.login)) return false;
-        return password.equals(operator.password);
-    }
-
-    @Override
-    public int hashCode() {
-        int result = id;
-        result = 31 * result + email.hashCode();
-        result = 31 * result + login.hashCode();
-        result = 31 * result + password.hashCode();
-        result = 31 * result + op_type_id;
-        return result;
+    public void setOpTypeId(int opTypeId) {
+        this.opTypeId = opTypeId;
     }
 
     public int getId() {
@@ -74,11 +47,38 @@ public class Operator {
         this.password = password;
     }
 
-    public int getOp_type_id() {
-        return op_type_id;
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Operator)) return false;
+
+        Operator operator = (Operator) o;
+
+        if (id != operator.id) return false;
+        if (opTypeId != operator.opTypeId) return false;
+        if (email != null ? !email.equals(operator.email) : operator.email != null) return false;
+        if (login != null ? !login.equals(operator.login) : operator.login != null) return false;
+        return password != null ? password.equals(operator.password) : operator.password == null;
     }
 
-    public void setOp_type_id(int op_type_id) {
-        this.op_type_id = op_type_id;
+    @Override
+    public String toString() {
+        return "Operator{" +
+                "id=" + id +
+                ", email='" + email + '\'' +
+                ", login='" + login + '\'' +
+                ", password='" + password + '\'' +
+                ", opTypeId=" + opTypeId +
+                '}';
+    }
+
+    @Override
+    public int hashCode() {
+        int result = id;
+        result = 31 * result + (email != null ? email.hashCode() : 0);
+        result = 31 * result + (login != null ? login.hashCode() : 0);
+        result = 31 * result + (password != null ? password.hashCode() : 0);
+        result = 31 * result + opTypeId;
+        return result;
     }
 }

@@ -290,7 +290,7 @@ a:hover {
 	height: 100px;
 	margin: 0 auto;
 	padding: 50px 0px 0px 0px;
-	background: url(images/img04.png) no-repeat center top;
+	background: url(images/img04.jpg) no-repeat center top;
 }
 
 #footer p {
@@ -480,5 +480,5 @@ a:hover {
 .divider {
 	overflow: hidden;
 	height: 50px;
-	background: url(images/img04.png) no-repeat center top;
+	background: url(images/img04.jpg) no-repeat center top;
 }

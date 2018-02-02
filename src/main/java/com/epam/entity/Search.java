@@ -1,9 +1,9 @@
 package com.epam.entity;
 
 public class Search {
-    String from;
-    String to;
-    String date;
+   private String from;
+   private String to;
+   private String date;
 
     public String getFrom() {
         return from;

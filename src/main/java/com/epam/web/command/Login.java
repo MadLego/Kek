@@ -1,10 +1,11 @@
 package com.epam.web.command;
 
 import com.epam.Path;
+import com.epam.dao.impl.MyOperatorDAO;
 import com.epam.db.DBManager;
+import com.epam.db.Role;
 import com.epam.db.TransactionManager;
 import com.epam.entity.Operator;
-import com.epam.dao.impl.MyOperatorDAO;
 import org.apache.commons.codec.digest.DigestUtils;
 import org.apache.log4j.Logger;
 
@@ -27,7 +28,9 @@ public class Login extends Command {
         LOG.trace("User"+operator);
         String result = checkLogin(operator,request);
         if (result.equals("")){
-            return "/administrator";
+            request.getSession().setAttribute("userRole", Role.getRole(operator));
+            request.getSession().setAttribute("userRoleName", Role.getRole(operator).getName());
+            return "/main";
         }
         LOG.trace("Errors --> "+result);
         request.setAttribute("loginResult",result);

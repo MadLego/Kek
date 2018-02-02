@@ -38,6 +38,7 @@ public class CommandContainer {
         commands.put("listCrewAccept", new PrepareAcceptCrew());
         commands.put("acceptCrew", new AcceptCrew());
         commands.put("sampleFlight", new SortFlights());
+        commands.put("logout", new Logout());
         LOG.debug("Command container was successfully initialized");
         LOG.trace("Number of commands --> " + commands.size());
     }

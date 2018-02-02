@@ -1,0 +1,11 @@
+0:0:0:0:0:0:0:1 - - [03/Feb/2018:00:53:18 +0200] "GET /Last/main HTTP/1.1" 200 4110 http-bio-8888-exec-1 155
+0:0:0:0:0:0:0:1 - - [03/Feb/2018:00:53:20 +0200] "GET /Last/login HTTP/1.1" 200 3095 http-bio-8888-exec-2 5
+0:0:0:0:0:0:0:1 - - [03/Feb/2018:00:53:26 +0200] "POST /Last/Controller HTTP/1.1" 200 4018 http-bio-8888-exec-3 580
+0:0:0:0:0:0:0:1 - - [03/Feb/2018:00:53:29 +0200] "GET /Last HTTP/1.1" 302 - http-bio-8888-exec-4 0
+0:0:0:0:0:0:0:1 - - [03/Feb/2018:00:53:29 +0200] "GET /Last/ HTTP/1.1" 200 4018 http-bio-8888-exec-5 88
+0:0:0:0:0:0:0:1 - - [03/Feb/2018:00:53:56 +0200] "GET /Last HTTP/1.1" 302 - http-bio-8888-exec-7 0
+0:0:0:0:0:0:0:1 - - [03/Feb/2018:00:53:56 +0200] "GET /Last/ HTTP/1.1" 200 4018 http-bio-8888-exec-8 10
+0:0:0:0:0:0:0:1 - - [03/Feb/2018:00:53:58 +0200] "GET /Last/Controller?command=listFlight HTTP/1.1" 200 10469 http-bio-8888-exec-9 85
+0:0:0:0:0:0:0:1 - - [03/Feb/2018:00:54:00 +0200] "GET /Last/administrator HTTP/1.1" 200 2731 http-bio-8888-exec-10 5
+0:0:0:0:0:0:0:1 - - [03/Feb/2018:00:54:01 +0200] "GET /Last/Controller?command=listFlight HTTP/1.1" 200 10469 http-bio-8888-exec-10 17
+0:0:0:0:0:0:0:1 - - [03/Feb/2018:00:55:36 +0200] "GET /favicon.ico HTTP/1.1" 404 - http-bio-8888-exec-3 0

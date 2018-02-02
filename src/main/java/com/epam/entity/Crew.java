@@ -2,12 +2,12 @@ package com.epam.entity;
 
 public class Crew {
     int id;
-    int flight_id;
-    int pilot;
-    int navigator;
-    int radio_operator;
-    int first_conductor;
-    int second_conductor;
+    private int flight_id;
+    private int pilot;
+    private int navigator;
+    private int radio_operator;
+    private int first_conductor;
+    private int second_conductor;
 
 
 

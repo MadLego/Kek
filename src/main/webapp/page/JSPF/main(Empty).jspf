@@ -1,0 +1,6 @@
+<li class="current_page_item"><a href="#"><fmt:message key="page.label.homePage" bundle="${lang}"/></a></li>
+<li><a href="Controller?command=listFlight"><fmt:message key="page.label.flights" bundle="${lang}"/></a></li>
+<li><a href="administrator"><fmt:message key="page.label.administrator" bundle="${lang}"/></a></li>
+<li><a href="Controller?command=listCrew"><fmt:message key="page.label.dispatcher" bundle="${lang}"/></a></li>
+<li><a href="login"><fmt:message key="page.label.login" bundle="${lang}"/></a></li>
+<li><a href="registration"><fmt:message key="page.label.registration" bundle="${lang}"/></a></li>

@@ -1,0 +1,4 @@
+<li><a href="main"><fmt:message key="page.label.homePage" bundle="${lang}"/></a></li>
+<li><a href="Controller?command=listFlight"><fmt:message key="page.label.flights" bundle="${lang}"/></a></li>
+<li><a href="administrator"><fmt:message key="page.label.administrator" bundle="${lang}"/></a></li>
+<li><a href="Controller?command=logout"><fmt:message key="label.view.logout" bundle="${lang}"/></a></li>

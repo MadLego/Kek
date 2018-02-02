@@ -8,6 +8,15 @@
     <display-name>Archetype Created Web Application</display-name>
 
     <servlet>
+        <servlet-name>Controller</servlet-name>
+        <servlet-class>com.epam.web.Controller</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Controller</servlet-name>
+        <url-pattern>/Controller</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
         <servlet-name>Captcha</servlet-name>
         <servlet-class>com.epam.web.MyCaptcha</servlet-class>
     </servlet>
@@ -207,11 +216,44 @@
         <filter-name>langFilter</filter-name>
         <filter-class>com.epam.filter.LangFilter</filter-class>
     </filter>
-
     <filter-mapping>
         <filter-name>langFilter</filter-name>
         <url-pattern>/*</url-pattern>
     </filter-mapping>
+
+    <filter>
+        <filter-name>AccessFilter</filter-name>
+        <filter-class>com.epam.filter.AccessFilter</filter-class>
+        <init-param>
+            <param-name>admin</param-name>
+            <param-value>listFlight prepareFlight newFlight listFlightForDelete deleteFlight listFlightForChange
+                changeThisFlight changeFlight prepareEmployee newEmployee listEmployeeForDelete deleteEmployee
+                listEmployeeForChange changeThisEmployee changeEmployee sortFlightByName sortFlightByNumber
+                searchFlight listCrewAccept acceptCrew sampleFlight</param-value>
+        </init-param>
+        <init-param>
+            <param-name>dispatcher</param-name>
+            <param-value>listFlight sortFlightByName sortFlightByNumber listCrew newThisCrew newCrew
+                searchFlight</param-value>
+        </init-param>
+        <init-param>
+            <param-name>client</param-name>
+            <param-value>listFlight sampleFlight</param-value>
+        </init-param>
+        <init-param>
+            <param-name>common</param-name>
+            <param-value>logout searchFlight sampleFlight listFlight registration flights login</param-value>
+        </init-param>
+        <init-param>
+            <param-name>out-of-control</param-name>
+            <param-value>logout</param-value>
+        </init-param>
+    </filter>
+    <filter-mapping>
+        <filter-name>AccessFilter</filter-name>
+        <servlet-name>Controller</servlet-name>
+    </filter-mapping>
+    
 
     <resource-ref>
         <description>DB Connection</description>

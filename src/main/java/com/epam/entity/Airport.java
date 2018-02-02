@@ -2,11 +2,11 @@ package com.epam.entity;
 
 public class Airport {
     int id;
-    String name;
-    String code;
-    String city;
-    double latitude;
-    double longitude;
+    private String name;
+    private String code;
+    private String city;
+    private double latitude;
+    private double longitude;
 
     @Override
     public String toString() {

@@ -1,8 +1,10 @@
 com\epam\web\command\PrepareAcceptCrew.class
 com\epam\web\command\SearchFlightByAirport.class
 com\epam\web\command\AllFlightsList.class
+com\epam\db\Role.class
 com\epam\dao\OperatorDAO.class
 com\epam\filter\LangFilter.class
+com\epam\web\command\Logout.class
 com\epam\dto\OperatorParser.class
 com\epam\web\command\SortFlightByName.class
 com\epam\Path.class
@@ -36,6 +38,7 @@ com\epam\web\command\PrepareChangeFlight.class
 com\epam\dto\CrewParser.class
 com\epam\db\TransactionManager.class
 com\epam\web\command\PrepareDeleteEmployee.class
+com\epam\filter\AccessFilter.class
 com\epam\dto\DateTimeParser.class
 com\epam\dao\impl\MyCrewDAO.class
 com\epam\web\command\Login.class

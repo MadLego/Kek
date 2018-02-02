@@ -6,6 +6,7 @@ C:\EPAM\Last\src\main\java\com\epam\web\command\SortFlightByName.java
 C:\EPAM\Last\src\main\java\com\epam\dto\FlightDTO.java
 C:\EPAM\Last\src\main\java\com\epam\dao\impl\MyEmployeeDAO.java
 C:\EPAM\Last\src\main\java\com\epam\db\Messages.java
+C:\EPAM\Last\src\main\java\com\epam\db\Role.java
 C:\EPAM\Last\src\main\java\com\epam\dao\impl\MyCrewDAO.java
 C:\EPAM\Last\src\main\java\com\epam\web\command\Registration.java
 C:\EPAM\Last\src\main\java\com\epam\web\command\SearchFlightByAirport.java
@@ -23,6 +24,7 @@ C:\EPAM\Last\src\main\java\com\epam\web\command\SortFlights.java
 C:\EPAM\Last\src\main\java\com\epam\entity\CrewManAdmission.java
 C:\EPAM\Last\src\main\java\com\epam\dto\ChangeEmployeeParser.java
 C:\EPAM\Last\src\main\java\com\epam\db\Fields.java
+C:\EPAM\Last\src\main\java\com\epam\web\command\Logout.java
 C:\EPAM\Last\src\main\java\com\epam\dto\ChangeFlightPaser.java
 C:\EPAM\Last\src\main\java\com\epam\web\command\PrepareDeleteFlight.java
 C:\EPAM\Last\src\main\java\com\epam\web\MyCaptcha.java
@@ -51,6 +53,7 @@ C:\EPAM\Last\src\main\java\com\epam\web\command\Login.java
 C:\EPAM\Last\src\main\java\com\epam\web\command\ChangeEmployee.java
 C:\EPAM\Last\src\main\java\com\epam\dto\EmployeeParser.java
 C:\EPAM\Last\src\main\java\com\epam\entity\Search.java
+C:\EPAM\Last\src\main\java\com\epam\filter\AccessFilter.java
 C:\EPAM\Last\src\main\java\com\epam\entity\Crew.java
 C:\EPAM\Last\src\main\java\com\epam\dto\EmployeeDTO.java
 C:\EPAM\Last\src\main\java\com\epam\web\command\ChangeFlight.java

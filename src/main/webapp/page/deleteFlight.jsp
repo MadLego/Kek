@@ -5,40 +5,7 @@
   Time: 15:02
   To change this template use File | Settings | File Templates.
 --%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ taglib uri="/WEB-INF/language.tld" prefix="mytag"%>
-<%@ taglib prefix="my" uri="mytaglib.tld" %>
-<script type="text/javascript">
-    function insertParam(key, value) {
-        key = encodeURIComponent(key); value = encodeURIComponent(value);
-
-        var kvp = document.location.search.substr(1).split('&');
-        if (kvp == '') {
-            document.location.search = '?' + key + '=' + value;
-        }
-        else {
-
-            var i = kvp.length; var x; while (i--) {
-                x = kvp[i].split('=');
-
-                if (x[0] == key) {
-                    x[1] = value;
-                    kvp[i] = x.join('=');
-                    break;
-                }
-            }
-
-            if (i < 0) { kvp[kvp.length] = [key, value].join('='); }
-
-            //this will reload the page, it's likely better to store this until finished
-            document.location.search = kvp.join('&');
-        }
-    }
-</script>
-<fmt:setLocale value="${currentLocale}" scope="session"/>
-<fmt:setBundle basename="FlightBundle" var="lang" />
+<%@ include file="/page/header.jspf"%>
 <head>
     <meta charset="UTF-8">
     <title><fmt:message key="page.label.administrator" bundle="${lang}"/></title>
@@ -54,12 +21,14 @@
             <ul>
                 <form action="Controller" name="command" method="post">
                     <input type="hidden" name="command">
-                    <li><a href="main"><fmt:message key="page.label.homePage" bundle="${lang}"/></a></li>
-                    <li><a href="Controller?command=listFlight"><fmt:message key="page.label.flights" bundle="${lang}"/></a></li>
-                    <li><a href="administrator"><fmt:message key="page.label.administrator" bundle="${lang}"/></a></li>
-                    <li><a href="Controller?command=listCrew"><fmt:message key="page.label.dispatcher" bundle="${lang}"/></a></li>
-                    <li><a href="login"><fmt:message key="page.label.login" bundle="${lang}"/></a></li>
-                    <li><a href="registration"><fmt:message key="page.label.registration" bundle="${lang}"/></a></li>
+                    <c:choose>
+                        <c:when test="${userRoleName eq 'admin'}">
+                            <%@ include file="/page/JSPF/administrator(Admin).jspf"%>
+                        </c:when>
+                        <c:otherwise>
+                            <%@ include file="/page/JSPF/administrator(Empty).jspf"%>
+                        </c:otherwise>
+                    </c:choose>
                 </form>
             </ul>
         </div>

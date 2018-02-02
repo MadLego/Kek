@@ -4,9 +4,9 @@ import java.sql.Date;
 
 public class CrewManAdmission {
     int id;
-    Date date;
-    int crew_man_id;
-    int is_admitted;
+    private Date date;
+    private int crew_man_id;
+    private int is_admitted;
 
     @Override
     public boolean equals(Object o) {

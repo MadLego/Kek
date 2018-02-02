@@ -2,12 +2,12 @@ package com.epam.entity;
 
 public class CrewMan {
     int id;
-    String firstName;
-    String lastName;
-    int age;
-    int isPermitted;
-    String isPermittedView;
-    String role;
+    private String firstName;
+    private String lastName;
+    private int age;
+    private int isPermitted;
+    private String isPermittedView;
+    private String role;
 
 
     public String getIsPermittedView() {
