@@ -23,14 +23,7 @@
             <ul class="menu">
                 <form action="Controller" name="command" method="post">
                     <input type="hidden" name="command">
-                    <c:choose>
-                        <c:when test="${userRoleName eq 'admin'}">
-                            <%@ include file="/page/JSPF/administrator(Admin).jspf"%>
-                        </c:when>
-                        <c:otherwise>
-                            <%@ include file="/page/JSPF/administrator(Empty).jspf"%>
-                        </c:otherwise>
-                    </c:choose>
+                    <%@ include file="/page/JSPF/administrator(Empty).jspf"%>
                 </form>
             </ul>
         </div>
